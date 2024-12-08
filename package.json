@@ -1,0 +1,42 @@
+{
+  "name": "advisar",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "fslightbox-react": "^1.7.6",
+    "gsap": "^3.12.5",
+    "imagesloaded": "^5.0.0",
+    "isotope-layout": "^3.0.6",
+    "lenis": "^1.1.18",
+    "node": "^22.12.0",
+    "react": "^19.0.0",
+    "react-animated-progress-bar": "^1.1.2",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.0.0",
+    "react-helmet-async": "^2.0.5",
+    "react-icons": "^5.4.0",
+    "react-router-dom": "^7.0.2",
+    "swiper": "^11.1.15"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.16.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "vite": "^6.0.3"
+  }
+}
