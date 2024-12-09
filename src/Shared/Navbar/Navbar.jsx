@@ -1,20 +1,25 @@
-/* eslint-disable no-unused-vars */
 import { Link } from 'react-router-dom';
-import Logo from '/images/logo.png';
+import Logo from '/images/logo_2.png';
+import Logo2 from '/images/logo.png';
 import './navbar.css';
 import { useEffect, useRef } from 'react';
 import {
   FaChevronDown,
   FaEnvelope,
   FaFacebookF,
+  FaInstagram,
   FaLinkedinIn,
   FaPinterestP,
   FaXTwitter,
 } from 'react-icons/fa6';
 import { FaPhoneAlt, FaTimes } from 'react-icons/fa';
-import { MdLightMode, MdLocationPin } from 'react-icons/md';
+import { MdLocationPin } from 'react-icons/md';
 import { IoMdPaperPlane } from 'react-icons/io';
 import { LuMoveRight } from 'react-icons/lu';
+import { ImFacebook2 } from 'react-icons/im';
+import { BiSearch } from 'react-icons/bi';
+import { HiOutlineMail } from 'react-icons/hi';
+import { GiPhone } from 'react-icons/gi';
 
 const Navbar = () => {
   //sticky
@@ -35,7 +40,44 @@ const Navbar = () => {
       : header.classList.remove('is-sticky');
   };
 
-  //Menu Bar
+  //Menu Sidebar
+
+  const menuSideBarRef = useRef(null);
+  const sidebarContentRef = useRef(null);
+  const bodyOverlay2Ref = useRef(null);
+  const closeBtn2Ref = useRef(null);
+
+  useEffect(() => {
+    const menuSideBar = menuSideBarRef.current;
+    const sidebarContent = sidebarContentRef.current;
+    const bodyOverlay2 = bodyOverlay2Ref.current;
+    const closeBtn2 = closeBtn2Ref.current;
+
+    const addClasses = () => {
+      sidebarContent.classList.add('opened');
+      bodyOverlay2.classList.add('apply');
+    };
+
+    const removeClasses = () => {
+      sidebarContent.classList.remove('opened');
+      bodyOverlay2.classList.remove('apply');
+    };
+
+    if (menuSideBar && sidebarContent && bodyOverlay2 && closeBtn2) {
+      menuSideBar.addEventListener('click', addClasses);
+      closeBtn2.addEventListener('click', removeClasses);
+      bodyOverlay2.addEventListener('click', removeClasses);
+    }
+
+    return () => {
+      if (menuSideBar && sidebarContent && bodyOverlay2 && closeBtn2) {
+        menuSideBar.removeEventListener('click', addClasses);
+        closeBtn2.removeEventListener('click', removeClasses);
+        bodyOverlay2.removeEventListener('click', removeClasses);
+      }
+    };
+  }, []);
+
   const menuBarRef = useRef(null);
   const offcanvasRef = useRef(null);
   const bodyOverlayRef = useRef(null);
@@ -124,43 +166,7 @@ const Navbar = () => {
       });
     }
   }, [headerIcon]);
-  //Menu Sidebar
 
-  const menuSideBarRef = useRef(null);
-  const sidebarContentRef = useRef(null);
-  const bodyOverlay2Ref = useRef(null);
-  const closeBtn2Ref = useRef(null);
-
-  useEffect(() => {
-    const menuSideBar = menuSideBarRef.current;
-    const sidebarContent = sidebarContentRef.current;
-    const bodyOverlay2 = bodyOverlay2Ref.current;
-    const closeBtn2 = closeBtn2Ref.current;
-
-    const addClasses = () => {
-      sidebarContent.classList.add('opened');
-      bodyOverlay2.classList.add('apply');
-    };
-
-    const removeClasses = () => {
-      sidebarContent.classList.remove('opened');
-      bodyOverlay2.classList.remove('apply');
-    };
-
-    if (menuSideBar && sidebarContent && bodyOverlay2 && closeBtn2) {
-      menuSideBar.addEventListener('click', addClasses);
-      closeBtn2.addEventListener('click', removeClasses);
-      bodyOverlay2.addEventListener('click', removeClasses);
-    }
-
-    return () => {
-      if (menuSideBar && sidebarContent && bodyOverlay2 && closeBtn2) {
-        menuSideBar.removeEventListener('click', addClasses);
-        closeBtn2.removeEventListener('click', removeClasses);
-        bodyOverlay2.removeEventListener('click', removeClasses);
-      }
-    };
-  }, []);
   return (
     <>
       <div className='offcanvas-area'>
@@ -179,7 +185,7 @@ const Navbar = () => {
           <div className='offcanvas_logo'>
             <Link to={'/'}>
               <img
-                src={Logo}
+                src={Logo2}
                 draggable='false'
               />
             </Link>
@@ -254,12 +260,79 @@ const Navbar = () => {
         ref={bodyOverlayRef}
         className='body-overlay'
       ></div>
+      <header className='bg-BodyBg2-0 relative z-10 before:absolute before:top-0 before:-left-[10%] before:w-3/5 before:h-full before:bg-PrimaryColor-0 before:-skew-x-[30deg] before:-z-10 after:absolute after:top-0 after:left-1/2 after:translate-x-[5px] after:w-1 after:h-full after:bg-PrimaryColor-0 after:-skew-x-[30deg] after:-z-10'>
+        <div className='Container flex items-center justify-between h-[50px]'>
+          <div className='flex items-center gap-8'>
+            <div className=' sm:flex items-center gap-2 hidden'>
+              <h6 className='text-lg text-white'>
+                <HiOutlineMail />
+              </h6>
+              <Link
+                to={'/'}
+                className='font-FiraSans text-[15px] text-white transition-all duration-500 hover:text-white'
+              >
+                example@gmail.com
+              </Link>
+            </div>
+            <div className=' md:flex items-center gap-2 hidden'>
+              <h6 className='text-white [transform:rotateX(180deg)]'>
+                <GiPhone />
+              </h6>
+              <Link
+                to={'/'}
+                className='font-FiraSans text-[15px] text-white transition-all duration-500 hover:text-white'
+              >
+                +980 123 (4587) 584
+              </Link>
+            </div>
+          </div>
+          <div className='flex items-center gap-5'>
+            <h5 className='font-FiraSans font-medium text-sm uppercase text-white'>
+              Follow Us :
+            </h5>
+            <ul className='flex gap-5 items-center'>
+              <li>
+                <Link
+                  to={'/'}
+                  className='transition-all duration-500 text-TextColor-0 hover:text-PrimaryColor-0'
+                >
+                  <ImFacebook2 size={'14'} />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={'/'}
+                  className='transition-all duration-500 text-TextColor-0 hover:text-PrimaryColor-0'
+                >
+                  <FaXTwitter />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={'/'}
+                  className='transition-all duration-500 text-TextColor-0 hover:text-PrimaryColor-0'
+                >
+                  <FaLinkedinIn />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={'/'}
+                  className='transition-all duration-500 text-TextColor-0 hover:text-PrimaryColor-0'
+                >
+                  <FaInstagram />
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
       <div
         id='header-sticky'
-        className='header-area header-sticky header-creative xl:mt-3 2xl:mt-0'
+        className='header-area header-sticky style-three'
       >
         <div className='Container'>
-          <div className='flex items-center justify-between lg:grid lg:grid-cols-12'>
+          <div className='bg-transparent rounded-md flex items-center justify-between lg:grid lg:grid-cols-12'>
             <div className='col-span-2'>
               <div className='header-logo'>
                 <Link to={'/'}>
@@ -270,7 +343,7 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <div className='col-span-8 hidden lg:block'>
+            <div className='col-span-7 hidden lg:block'>
               <div className='header-main-menu text-center'>
                 <nav className='main-menu-content'>
                   <ul>
@@ -464,21 +537,33 @@ const Navbar = () => {
                 </nav>
               </div>
             </div>
-            <div className='col-span-2'>
-              <div className='header-right-box flex items-center gap-10 lg:gap-4 2xl:gap-8 justify-end'>
-                <div className='header-btn hidden lg:block'>
-                  <Link to={'/contact'}>
-                    get a quote<span></span>
-                    <LuMoveRight />
+            <div className='col-span-3'>
+              <div className='header-right-box flex items-center gap-5 justify-end'>
+                <div className='hidden lg:block relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[25px] before:h-20 before:w-[1px] before:bg-white before:opacity-20 2xl:mr-5'>
+                  <Link to={'/'}>
+                    <button className='text-HeadingColor-0 relative top-1'>
+                      <BiSearch size={'20'} />
+                    </button>
                   </Link>
                 </div>
-                <div className='light-btn hidden xl:block relative top-3'>
+                <div className='hidden lg:block relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[27px] before:h-20 before:w-[1px] before:bg-white before:opacity-20'>
                   <Link
-                    to={'/home3'}
-                    className='text-white flex items-center justify-center size-9 rounded-full bg-white bg-opacity-15'
+                    to={'/'}
+                    className='bg-PrimaryColor-0 font-FiraSans text-white capitalize text-[15px] font-medium px-[31px] py-[15px] rounded-md overflow-hidden flex items-center gap-1 border border-PrimaryColor-0 relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-BodyBg2-0 before:-z-10 before:scale-0 before:transition-all before:duration-500 hover:before:scale-100'
                   >
-                    <MdLightMode size={'20'} />
+                    get a quote<span></span>
+                    <LuMoveRight size={'19'} />
                   </Link>
+                </div>
+                <div
+                  className='header-sidebar hidden size-[55px] bg-BodyBg-0 rounded-md 2xl:flex items-center justify-center cursor-pointer'
+                  ref={menuSideBarRef}
+                >
+                  <button className='menu-sidebar'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
                 </div>
                 <div className='header-bar lg:hidden'>
                   <button
@@ -511,7 +596,7 @@ const Navbar = () => {
           <div className='sidebar_logo'>
             <Link to={'/'}>
               <img
-                src={Logo}
+                src={Logo2}
                 draggable='false'
               />
             </Link>
@@ -523,7 +608,10 @@ const Navbar = () => {
             </p>
           </div>
           <div>
-            <ul>
+            <div className='sidebar_service-title'>
+              <h5>What Services We Provide?</h5>
+            </div>
+            <ul className='service_list'>
               <li>
                 <Link to={'/'}>
                   <button>Managed IT Services</button>
@@ -564,66 +652,11 @@ const Navbar = () => {
                   <button>Website Development</button>
                 </Link>
               </li>
-              <li>
-                <Link to={'/'}>
-                  <button>Website Development</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/'}>
-                  <button>Website Development</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/'}>
-                  <button>Website Development</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/'}>
-                  <button>Website Development</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/'}>
-                  <button>Website Development</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/'}>
-                  <button>Website Development</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/'}>
-                  <button>Website Development</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/'}>
-                  <button>Website Development</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/'}>
-                  <button>Website Development</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/'}>
-                  <button>Website Development</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/'}>
-                  <button>Website Development</button>
-                </Link>
-              </li>
             </ul>
           </div>
           <div className='sidebar_contact-info'>
             <div className='sidebar_contact-title'>
-              <h5>Contact Us</h5>
+              <h5>Have Questions? Contact Our Team!</h5>
             </div>
             <ul>
               <li>
@@ -660,24 +693,29 @@ const Navbar = () => {
                 </button>
               </div>
             </form>
-            <div className='status'></div>
           </div>
-          <div className='sidebar_social'>
-            <div className='sidebar-social-icon'>
+          <ul className='sidebar-social-icon'>
+            <li>
               <Link to={'/'}>
                 <FaFacebookF />
               </Link>
+            </li>
+            <li>
               <Link to={'/'}>
                 <FaXTwitter />
               </Link>
+            </li>
+            <li>
               <Link to={'/'}>
                 <FaPinterestP />
               </Link>
+            </li>
+            <li>
               <Link to={'/'}>
                 <FaLinkedinIn />
               </Link>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
       <div

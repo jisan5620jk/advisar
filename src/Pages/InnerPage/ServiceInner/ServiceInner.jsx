@@ -1,9 +1,9 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb";
-import Service from "../../../Component3/Service/Service";
-import CallTo from "../../../Component2Default/CallTo/CallTo";
-import Testimonial from "../../../Component2Default/Testimonial/Testimonial";
-import Pricing from "../../../Component2Default/Pricing/Pricing";
+import Service from "../../../Component1/Service/Service";
+import CallTo from "../../../Component5Default/CallTo/CallTo";
+import Testimonial from "../../../Component5Default/Testimonial/Testimonial";
+import Pricing from "../../../Component5Default/Pricing/Pricing";
 
 const ServiceInner = () => {
   return (

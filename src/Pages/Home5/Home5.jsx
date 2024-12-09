@@ -1,28 +1,32 @@
-import About from "../../Component2Classic/About/About";
-import Banner from "../../Component2Classic/Banner/Banner";
-import Blog from "../../Component2Classic/Blog/Blog";
-import CallBack from "../../Component2Classic/CallBack/CallBack";
-import CallTo from "../../Component2Classic/CallTo/CallTo";
-import Counter from "../../Component2Classic/Counter/Counter";
-import Pricing from "../../Component2Classic/Pricing/Pricing";
-import Project from "../../Component2Classic/Project/Project";
-import Service from "../../Component2Classic/Service/Service";
-import Skill from "../../Component2Classic/Skill/Skill";
-import Testimonial from "../../Component2Classic/Testimonial/Testimonial";
+import About from '../../Component3Dark/About/About';
+import Banner from '../../Component3Dark/Banner/Banner';
+import Blog from '../../Component3Dark/Blog/Blog';
+import Brand from '../../Component3Dark/Brand/Brand';
+import ContentSlider from '../../Component3Dark/ContentSlider/ContentSlider';
+import Counter from '../../Component3Dark/Counter/Counter';
+import Feature from '../../Component3Dark/Feature/Feature';
+import LatestWork from '../../Component3Dark/LatestWork/LatestWork';
+import Pricing from '../../Component3Dark/Pricing/Pricing';
+import Service from '../../Component3Dark/Service/Service';
+import TeamMember from '../../Component3Dark/TeamMember/TeamMember';
+import Testimonial from '../../Component3Dark/Testimonial/Testimonial';
+import Work from '../../Component3Dark/Work/Work';
 
 const Home5 = () => {
   return (
     <>
       <Banner />
-      <Counter />
-      <About />
+      <Brand />
+      <Feature />
       <Service />
-      <Skill />
-      <CallTo />
-      <Testimonial />
-      <Project />
+      <ContentSlider />
+      <About />
+      <Counter />
+      <Work />
       <Pricing />
-      <CallBack />
+      <LatestWork />
+      <TeamMember />
+      <Testimonial />
       <Blog />
     </>
   );
