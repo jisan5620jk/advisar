@@ -163,7 +163,7 @@ const Navbar4 = () => {
   }, [headerIcon]);
 
   return (
-    <>
+    <div>
       <div className='offcanvas-area'>
         <div
           ref={offcanvasRef}
@@ -630,7 +630,7 @@ const Navbar4 = () => {
         ref={bodyOverlay2Ref}
         className='body-overlay2'
       ></div>
-    </>
+    </div>
   );
 };
 

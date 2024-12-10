@@ -32,7 +32,7 @@ const Appointment = () => {
                 className='absolute top-[58%] sm:top-1/3 md:top-[58%] left-14 animate-swing'
               />
               <div className='hidden absolute bottom-[65px] left-[55px] bg-white bg-opacity-10 rounded-full pr-10 border-2 border-white border-opacity-40 backdrop-filter backdrop-blur-md sm:flex items-center gap-7'>
-                <div className='size-[78px] rounded-full bg-[#ff9307] flex items-center justify-center relative z-10 after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:size-[81px] after:rounded-full after:bg-[#ff9307] after:-z-10 before:absolute before:-top-3 before:-left-3 before:size-[102px] before:rounded-full before:border-2 before:border-[#ff9307]'>
+                <div className='size-[78px] rounded-full bg-PrimaryColor-0 flex items-center justify-center relative z-10 after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:size-[81px] after:rounded-full after:bg-PrimaryColor-0 after:-z-10 before:absolute before:-top-3 before:-left-3 before:size-[102px] before:rounded-full before:border-2 before:border-PrimaryColor-0'>
                   <span className='size-9 flex items-center justify-center rounded-full text-white border-2 border-white'>
                     <MdLocalPhone size={'20'} />
                   </span>

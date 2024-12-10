@@ -165,7 +165,10 @@ const Navbar6 = () => {
   }, [headerIcon]);
 
   return (
-    <div className='absolute z-50 w-full'>
+    <div
+      className='absolute z-50 w-full'
+      data-lenis-prevent
+    >
       <div className='offcanvas-area'>
         <div
           ref={offcanvasRef}

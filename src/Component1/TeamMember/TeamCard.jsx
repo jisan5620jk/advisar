@@ -20,7 +20,7 @@ const TeamCard = ({
         />
         <div className='absolute z-30 top-5 right-5'>
           <Link to={'/'}>
-            <button className='size-[42px] flex justify-center items-center rounded-full overflow-hidden relative bg-[#ff9307] text-white text-xl'>
+            <button className='size-[42px] flex justify-center items-center rounded-full overflow-hidden relative bg-PrimaryColor-0 text-white text-xl'>
               {teamShare}
             </button>
           </Link>

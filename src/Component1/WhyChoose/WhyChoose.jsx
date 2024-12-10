@@ -1,8 +1,7 @@
 import whyChooseThumb from '/images/choose_thumb.png';
 import whyChooseShape from '/images/box.png';
 import whyChooseShape2 from '/images/choose_rotete.png';
-import whyChooseShape3 from '/images/choose_dot.png';
-import whyChooseShape4 from '/images/choose_dot2.png';
+import whyChooseShape3 from '/images/choose_dot2.png';
 import border from '/images/hero_border.png';
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 import FsLightbox from 'fslightbox-react';
@@ -22,7 +21,7 @@ const WhyChoose = () => {
               className='absolute -z-10 top-0 right-14 animate-dance3 hidden 2xl:block'
             />
             <img
-              src={whyChooseShape4}
+              src={whyChooseShape3}
               draggable='false'
               className='absolute -z-10 -bottom-6 left-0 animate-wiggle hidden 2xl:block'
             />

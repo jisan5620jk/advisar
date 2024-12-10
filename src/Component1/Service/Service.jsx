@@ -3,7 +3,7 @@ import serviceThumb2 from "/images/service_2.png";
 import serviceThumb3 from "/images/service_5.png";
 import thumbIcon from '/images/service_icon.png';
 import serviceThumbShape from '/images/service_shpe.png';
-import serviceShape from '/images/boxs.png';
+import serviceShape from '/images/box.png';
 import serviceShape2 from '/images/service_shape.png';
 import serviceShape3 from '/images/service_shpe2.png';
 import contentShape from '/images/service_dot2.png';

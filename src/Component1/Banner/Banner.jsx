@@ -79,7 +79,7 @@ const Banner = () => {
               className='absolute left-1/2 -translate-x-1/2 top-24 -z-10'
             />
             <div className='absolute top-1/2 -translate-y-1/2 right-0 bg-white pl-5 pr-[50px] py-5 rounded-md hidden sm:flex items-center gap-5 shadow-lg'>
-              <div className='size-[56px] rounded-full bg-[#ff9307] flex items-center justify-center text-2xl text-white'>
+              <div className='size-[56px] rounded-full bg-PrimaryColor-0 flex items-center justify-center text-2xl text-white'>
                 <FaRegCircleCheck />
               </div>
               <div>

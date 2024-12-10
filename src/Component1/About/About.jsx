@@ -1,11 +1,10 @@
 import aboutThumb from '/images/about_thumb2.png';
 import aboutShape from '/images/about_shape_3.png';
 import aboutShape2 from '/images/about_shape4.png';
-import aboutShape3 from '/images/about_shape5.png';
 import aboutIcon from '/images/about3_icon1.png';
 import aboutIcon2 from '/images/about3_icon2.png';
 import border from '/images/hero_border.png';
-import thumb from '/images/like_2.png';
+import thumb from '/images/like.png';
 import { Link } from 'react-router-dom';
 import { FaRegThumbsUp } from 'react-icons/fa';
 
@@ -73,7 +72,7 @@ const About = () => {
             </p>
             <div className='grid items-center grid-cols-1 gap-7 sm:gap-1 md:gap-7 lg:gap-1 2xl:gap-7 sm:grid-cols-2 border-b border-BorderColor-0 mt-9 pb-7 mb-9'>
               <div className='flex items-center gap-5'>
-                <div className='relative z-10'>
+                <div className='relative z-10 size-20 rounded-md flex items-center justify-center bg-PrimaryColor-0 bg-opacity-10'>
                   <img
                     src={aboutIcon}
                     draggable='false'
@@ -86,7 +85,7 @@ const About = () => {
                 </div>
               </div>
               <div className='flex items-center gap-5'>
-                <div className='relative z-10'>
+                <div className='relative z-10 size-20 rounded-md flex items-center justify-center bg-PrimaryColor-0 bg-opacity-10'>
                   <img
                     src={aboutIcon2}
                     draggable='false'
@@ -119,11 +118,6 @@ const About = () => {
         src={aboutShape2}
         draggable='false'
         className='absolute -z-10 bottom-14 right-5 animate-wiggle hidden 2xl:block'
-      />
-      <img
-        src={aboutShape3}
-        draggable='false'
-        className='absolute -z-10 top-36 right-52 animate-dance2 hidden 2xl:block'
       />
     </section>
   );
