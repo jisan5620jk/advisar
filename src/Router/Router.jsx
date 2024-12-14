@@ -14,6 +14,8 @@ import TeamInner from '../Pages/InnerPage/TeamInner/TeamInner';
 import PricingInner from '../Pages/InnerPage/PricingInner/PricingInner';
 import ContactInner from '../Pages/InnerPage/ContactInner/ContactInner';
 import PortfolioInner from '../Pages/InnerPage/PortfolioInner/PortfolioInner';
+import Main2 from '../Main/Main2';
+import Home2 from '../Pages/Home2/Home2';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,16 @@ const router = createBrowserRouter([
       {
         path: '/home3',
         element: <Home3 />,
+      },
+    ],
+  },
+  {
+    errorElement: <ErrorPage />,
+    element: <Main2 />,
+    children: [
+      {
+        path: '/home2',
+        element: <Home2 />,
       },
     ],
   },

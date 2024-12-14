@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
+import Navbar from '../Shared/Navbar/Navbar';
 import BackToTop from '../Shared/BackToTop/BackToTop';
-import Navbar2 from '../Shared/Navbar/Navbar2';
-import Footer2 from '../Shared/Footer/Footer2';
+import Footer from '../Shared/Footer/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import HelmetChanger from '../Shared/Helmet/Helmet';
@@ -28,13 +28,13 @@ const Main2 = () => {
   gsap.ticker.lagSmoothing(0);
   return (
     <>
-      <HelmetChanger title={'Buseness Consulting Classic'} />
-      <Navbar2 />
+      <HelmetChanger title={'Buseness Consulting Creative'} />
+      <Navbar />
       <BackToTop />
       <div>
         <Outlet />
       </div>
-      <Footer2 />
+      <Footer />
     </>
   );
 };

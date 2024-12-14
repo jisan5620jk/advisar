@@ -1,0 +1,69 @@
+.feature_box .round-circle {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+  opacity: 0;
+}
+.feature_box:hover .round-circle ,
+.feature_boxs > div:nth-last-of-type(2) .feature_box .round-circle {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+  opacity: 1;
+}
+
+.feature_box:hover .round-circle ,
+.feature_boxs > div:nth-last-of-type(2) .feature_box .round-circle {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0 0);
+}
+
+.feature_box:hover .round-circle:before,
+.feature_boxs > div:nth-last-of-type(2) .feature_box .round-circle:before {
+  opacity: 1;
+}
+
+.feature_box .round-circle:before {
+  position: absolute;
+  content: '';
+  background: #0c6e6d;
+  width: 8px;
+  height: 8px;
+  left: 10px;
+  bottom: 9px;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.round-circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: -10px;
+  top: -10px;
+  border: 2px solid #0c6e6d;
+  border-radius: 50%;
+  clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%, 0 0);
+  transition: all 500ms ease;
+  animation: service_hexagon 2s infinite linear;
+  animation-play-state: paused;
+  opacity: 0;
+}
+
+@keyframes service_hexagon {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
