@@ -1,42 +1,40 @@
 /* eslint-disable react/prop-types */
 const TestimonialCard = ({
-  testiThumb,
-  testiQuote,
+  testiImg,
   testiRatingIcon,
   testiName,
   testiDesignation,
   testiDesc,
+  testiQuote,
 }) => {
   return (
-    <div className='testi-box relative text-center bg-white shadow-cases px-3 sm:px-10 lg:px-4 2xl:px-10 pt-10 pb-9 rounded-md rounded-ss-[80px] transition-all duration-500 before:absolute before:right-0 before:bottom-0 before:w-0 before:h-[5px] before:rounded-lg before:z-10 before:bg-[#ff9307] before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full'>
-      <div className='relative flex items-center justify-center'>
+    <div className="flex flex-col sm:flex-row sm:px-5 md:px-0 lg:pl-6 lg:py-6 xl:p-0 sm:items-center gap-8 bg-white rounded-xl overflow-hidden relative group z-10">
+      <div className="relative z-10">
         <img
-          src={testiThumb}
-          draggable='false'
-          className='mx-auto'
-        />
-        <img
-          src={testiQuote}
-          draggable='false'
-          className='absolute bottom-[6px] left-1/2 translate-x-[20px]'
+          src={testiImg}
+          draggable={false}
+          className="sm:w-28 md:w-full 2xl:w-[inherit]"
         />
       </div>
-      <h5 className='font-FiraSans font-semibold inline-block text-HeadingColor-0 text-xl pt-5 pb-1'>
-        {testiName}
-      </h5>
-      <p className='font-FiraSans text-TextColor2-0 text-[15px]'>
-        {testiDesignation}
-      </p>
-      <p className='font-FiraSans text-HeadingColor-0 m-auto pt-6'>
-        {testiDesc}
-      </p>
-      <ul className='flex gap-[6px] items-center justify-center mt-8'>
-        <li className='text-[#ffb609] text-xl'>{testiRatingIcon}</li>
-        <li className='text-[#ffb609] text-xl'>{testiRatingIcon}</li>
-        <li className='text-[#ffb609] text-xl'>{testiRatingIcon}</li>
-        <li className='text-[#ffb609] text-xl'>{testiRatingIcon}</li>
-        <li className='text-[#ffb609] text-xl'>{testiRatingIcon}</li>
-      </ul>
+      <div className="flex-1 lg:flex-[inherit] xl:flex-1 rounded overflow-hidden relative z-10 pl-5 pb-5 sm:py-7 md:py-0 sm:pl-0 mr-8">
+        <div className="transition-all duration-500">
+          <img src={testiQuote} draggable="false" />
+        </div>
+        <ul className="flex gap-[2px] items-center mt-4">
+          <li className="text-[#ffb609] text-[22px]">{testiRatingIcon}</li>
+          <li className="text-[#ffb609] text-[22px]">{testiRatingIcon}</li>
+          <li className="text-[#ffb609] text-[22px]">{testiRatingIcon}</li>
+          <li className="text-[#ffb609] text-[22px]">{testiRatingIcon}</li>
+          <li className="text-[#ffb609] text-[22px]">{testiRatingIcon}</li>
+        </ul>
+        <p className="font-FiraSans text-TextColor2-0 mt-4 text-sm sm:text-base">
+          {testiDesc}
+        </p>
+        <h5 className="font-FiraSans font-semibold text-HeadingColor-0 text-xl mt-5 mb-2">
+          {testiName}
+        </h5>
+        <p className="font-FiraSans text-TextColor2-0">{testiDesignation}</p>
+      </div>
     </div>
   );
 };

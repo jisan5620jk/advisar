@@ -18,28 +18,28 @@ const TeamCard = ({
           className='w-full rounded-md xl:w-[inherit] m-auto'
         />
           <ul>
-            <li className='absolute z-20 top-7 right-7 transition-all duration-300 group-hover:top-[74px]'>
+            <li className='absolute z-20 top-0 right-7 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:top-7'>
               <Link to={'/'}>
                 <button className='size-9 text-sm flex justify-center items-center rounded-full overflow-hidden relative bg-white transition-all duration-500 hover:text-white text-HeadingColor-0 z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-Secondarycolor-0 before:-z-10 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100'>
                   {socialIcon}
                 </button>
               </Link>
             </li>
-            <li className='absolute z-20 top-5 right-7 transition-all duration-500 group-hover:top-[119px]'>
+            <li className='absolute z-20 top-0 right-7 transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:top-20'>
               <Link to={'/'}>
                 <button className='size-9 text-sm flex justify-center items-center rounded-full overflow-hidden relative bg-white transition-all duration-500 hover:text-white text-HeadingColor-0 z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-Secondarycolor-0 before:-z-10 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100'>
                   {socialIcon2}
                 </button>
               </Link>
             </li>
-            <li className='absolute z-20 top-5 right-7 transition-all duration-700 group-hover:top-[166px]'>
+            <li className='absolute z-20 top-0 right-7 transition-all duration-700 opacity-0 group-hover:opacity-100 group-hover:top-[132px]'>
               <Link to={'/'}>
                 <button className='size-9 text-sm flex justify-center items-center rounded-full overflow-hidden relative bg-white transition-all duration-500 hover:text-white text-HeadingColor-0 z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-Secondarycolor-0 before:-z-10 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100'>
                   {socialIcon3}
                 </button>
               </Link>
             </li>
-            <li className='absolute z-20 top-5 right-7 transition-all duration-700 group-hover:top-[200px]'>
+            <li className='absolute z-20 top-0 right-7 transition-all duration-700 opacity-0 group-hover:opacity-100 group-hover:top-[182px]'>
               <Link to={'/'}>
                 <button className='size-9 text-sm flex justify-center items-center rounded-full overflow-hidden relative bg-white transition-all duration-500 hover:text-white text-HeadingColor-0 z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-Secondarycolor-0 before:-z-10 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100'>
                   {socialIcon4}
