@@ -1,54 +1,71 @@
-import CountUp from "react-countup";
+import { Link } from 'react-router-dom';
+import CounterCard from './CounterCard';
+import counterShape from '/images/star_icon.png';
+
+const counterData = [
+  {
+    id: 1,
+    counterShape: counterShape,
+    counterNumber: 12,
+    counterDesc: 'Total Projects Complated',
+    counterSuffex: 'K+',
+  },
+  {
+    id: 2,
+    counterShape: counterShape,
+    counterNumber: 950,
+    counterDesc: 'SATIFIED ACTIVE CUSTOMERS',
+    counterSuffex: '+',
+  },
+  {
+    id: 3,
+    counterNumber: 4,
+    counterDesc: 'AVERAGE CLIENTS RATINGS',
+    counterSuffex: '.7*',
+  },
+];
 
 const Counter = () => {
   return (
-    <div className='Container'>
-      <div className='bg-[url(/images/counter_bg.png)] bg-no-repeat bg-cover bg-center relative z-10 grid grid-cols-1 md:grid-cols-2 gap-7 lg:gap-0 lg:grid-cols-3 items-center justify-center py-[71px] px-3 rounded-md -mt-[100px]'>
-        <div className='relative flex items-center justify-center gap-10'>
+    <section className='pt-[74px] pb-[54px] bg-PrimaryColor-0 bg-no-repeat bg-cover bg-center'>
+      <div className='Container'>
+        <div className='grid lg:grid-cols-2 lg:items-center gap-8 lg:gap-0 pb-7'>
           <div>
-            <CountUp
-              start={-11}
-              end={12}
-              suffix={'K+'}
-              className='font-FiraSans text-3xl leading-[22px] sm:text-[50px] sm:leading-[42px] xl:text-[60px] xl:leading-[52px] text-white font-semibold relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[20px] before:w-[1px] before:h-8 before:bg-white before:bg-opacity-25'
-            />
+            <h1 className='font-FiraSans font-semibold text-white text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]'>
+              Get The Latest Achivement <br /> for Business Consult
+            </h1>
           </div>
-          <p className='font-FiraSans text-[15px] text-white capitalize'>
-            Completed Works <br /> with Satisfaction
-          </p>
+          <Link
+            to={'/about'}
+            className='flex lg:justify-end'
+          >
+            <button className='primary-btn !bg-[#1c9a98] !text-white'>{`Get Started Now`}</button>
+          </Link>
         </div>
-        <div className='relative flex items-center justify-center gap-10'>
-          <div>
-            <CountUp
-              start={-11}
-              prefix=''
-              end={950}
-              suffix={'+'}
-              className='font-FiraSans text-3xl leading-[22px] sm:text-[50px] sm:leading-[42px] xl:text-[60px] xl:leading-[52px] text-white font-semibold relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[20px] before:w-[1px] before:h-8 before:bg-white before:bg-opacity-25'
-            />
-          </div>
-          <div>
-            <p className='font-FiraSans text-[15px] text-white capitalize mt-2'>
-              Satisfied Active <br /> Customers
-            </p>
-          </div>
-        </div>
-        <div className='relative flex items-center justify-center gap-10'>
-          <div>
-            <CountUp
-              start={-11}
-              prefix='4.'
-              end={9}
-              suffix={'*'}
-              className='font-FiraSans text-3xl leading-[22px] sm:text-[50px] sm:leading-[42px] xl:text-[60px] xl:leading-[52px] text-white font-semibold relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[20px] before:w-[1px] before:h-8 before:bg-white before:bg-opacity-25'
-            />
-          </div>
-          <p className='font-FiraSans text-[15px] text-white capitalize'>
-            Average Clients <br /> Ratings
-          </p>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-7 xl:gap-10 lg:grid-cols-3 items-center justify-center border-t-[2px] border-BorderColor2-0 pt-8'>
+          {counterData.map(
+            ({
+              id,
+              counterShape,
+              counterNumber,
+              counterDesc,
+              counterSuffex,
+            }) => {
+              return (
+                <div key={id}>
+                  <CounterCard
+                    counterShape={counterShape}
+                    counterNumber={counterNumber}
+                    counterDesc={counterDesc}
+                    counterSuffex={counterSuffex}
+                  />
+                </div>
+              );
+            }
+          )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

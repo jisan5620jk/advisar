@@ -1,76 +1,60 @@
-import serviceThumb from "/images/service_1.png";
-import serviceThumb2 from "/images/service_2.png";
-import serviceThumb3 from "/images/service_5.png";
-import thumbIcon from '/images/service_icon.png';
-import serviceThumbShape from '/images/service_shpe.png';
-import serviceShape from '/images/boxs.png';
-import serviceShape2 from '/images/service_shape.png';
-import serviceShape3 from '/images/service_shpe2.png';
-import contentShape from '/images/service_dot2.png';
-import serviceShape4 from '/images/tir.png';
-import border from '/images/hero_border.png';
-import ServiceCard from "./ServiceCard";
-import { GoArrowUpRight } from "react-icons/go";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from 'swiper/modules';
-import "swiper/css";
+import serviceThumb from '/images/blog-1.jpg';
+import serviceThumb2 from '/images/blog-2.jpg';
+import serviceThumb3 from '/images/blog-3.jpg';
+import serviceIcon from '/images/service_icon1.png';
+import serviceIcon2 from '/images/service_icon2.png';
+import serviceShape from '/images/service_shape1.png';
+import serviceShape2 from '/images/service_shape2.png';
+import ServiceCard from './ServiceCard';
+import { GoArrowUpRight } from 'react-icons/go';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import ServiceNavigation from './ServiceNavigation';
 
 const ServiceData = [
   {
     id: 1,
+    serviceIcon: serviceIcon,
     serviceSubTitle: 'Finance',
     serviceTitle: 'Investment Idea',
-    serviceDesc:
-      'Seamlessly expedite extensible the business methodologies benchmark done',
+    serviceDesc: 'Seamlessly expedite extensible methodologies benchmark ',
     serviceUrl: '/service_details',
     btnContent: 'View Details',
     btnIcon: <GoArrowUpRight />,
     serviceThumb: serviceThumb,
-    serviceThumbShape: serviceThumbShape,
-    thumbIcon: thumbIcon,
-    contentShape: contentShape,
   },
   {
     id: 2,
+    serviceIcon: serviceIcon2,
     serviceSubTitle: 'Finance',
-    serviceTitle: 'Investment Idea',
-    serviceDesc:
-      'Seamlessly expedite extensible the business methodologies benchmark done',
+    serviceTitle: 'IT Solution Services',
+    serviceDesc: 'Seamlessly expedite extensible methodologies benchmark ',
     serviceUrl: '/service_details',
     btnContent: 'View Details',
     btnIcon: <GoArrowUpRight />,
     serviceThumb: serviceThumb2,
-    serviceThumbShape: serviceThumbShape,
-    thumbIcon: thumbIcon,
-    contentShape: contentShape,
   },
   {
     id: 3,
+    serviceIcon: serviceIcon,
     serviceSubTitle: 'Finance',
-    serviceTitle: 'Investment Idea',
-    serviceDesc:
-      'Seamlessly expedite extensible the business methodologies benchmark done',
+    serviceTitle: 'Marketing Services',
+    serviceDesc: 'Seamlessly expedite extensible methodologies benchmark ',
     serviceUrl: '/service_details',
     btnContent: 'View Details',
     btnIcon: <GoArrowUpRight />,
     serviceThumb: serviceThumb3,
-    serviceThumbShape: serviceThumbShape,
-    thumbIcon: thumbIcon,
-    contentShape: contentShape,
   },
   {
     id: 4,
+    serviceIcon: serviceIcon2,
     serviceSubTitle: 'Finance',
     serviceTitle: 'Investment Idea',
-    serviceDesc:
-      'Seamlessly expedite extensible the business methodologies benchmark done',
+    serviceDesc: 'Seamlessly expedite extensible methodologies benchmark ',
     serviceUrl: '/service_details',
     btnContent: 'View Details',
     btnIcon: <GoArrowUpRight />,
     serviceThumb: serviceThumb2,
-    serviceThumbShape: serviceThumbShape,
-    thumbIcon: thumbIcon,
-    contentShape: contentShape,
   },
 ];
 
@@ -80,7 +64,6 @@ const Service = () => {
     spaceBetween: 30,
     speed: 1000,
     initialSlide: 1,
-    centeredSlides: true,
     autoplay: true,
     breakpoints: {
       320: {
@@ -98,100 +81,68 @@ const Service = () => {
     },
   };
 
-    const pagination = {
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + ' pagination-bullet"></span>';
-      },
-    };
-
   return (
-    <section className='Service relative z-10 pt-28 pb-[120px] bg-gradient-to-t to-BodyBg-0 from-transparent'>
-      <div className='absolute -z-10 top-28 left-[22%] hidden 2xl:block animate-rotate'>
-        <img
-          src={serviceShape}
-          draggable='false'
-        />
-      </div>
-      <div className='absolute -z-10 top-40 right-[11rem] hidden 2xl:block animate-rotate'>
-        <img
-          src={serviceShape3}
-          draggable='false'
-        />
-      </div>
-      <div className='absolute -z-10 bottom-52 left-32 hidden 2xl:block animate-wiggle'>
-        <img
-          src={serviceShape2}
-          draggable='false'
-        />
-      </div>
-      <div className='absolute -z-10 top-36 right-[22%] hidden 2xl:block animate-rotate'>
-        <img
-          src={serviceShape4}
-          draggable='false'
-        />
+    <section className='relative z-10 pt-28 pb-[120px] bg-BodyBg4-0'>
+      <div className='absolute -z-10 top-40 left-0 hidden 2xl:block'>
+        <div className='relative animate-wiggle'>
+          <img
+            src={serviceShape2}
+            draggable='false'
+          />
+          <img
+            src={serviceShape}
+            draggable='false'
+            className='absolute top-[40%] left-28 animate-rotational'
+          />
+        </div>
       </div>
       <div className='Container'>
-        <div className='text-center'>
+        <div className='mb-4 md:-mb-[100px] lg:-mb-[120px]'>
           <h5 className='font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase mb-3'>
-            Services We Provide
+            // SERVICES WE PROVIDE
           </h5>
-          <h1 className='font-FiraSans font-semibold text-HeadingColor-0 inline-block text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[34px] lg:leading-[44px] xl:text-[40px] xl:leading-[50px] 2xl:text-[42px] 2xl:leading-[52px] relative pb-4'>
-            Individuals Professional Offer
-            <img
-              src={border}
-              draggable='false'
-              className='absolute bottom-0 left-1/2 -translate-x-1/2'
-            />
+          <h1 className='font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[34px] lg:leading-[44px] xl:text-[40px] xl:leading-[50px] 2xl:text-[42px] 2xl:leading-[52px] mb-4'>
+            Individuals offer Professional <br /> Services we Provide
           </h1>
         </div>
-        <div className='mt-[66px]'>
-          <Swiper
-            {...settings}
-            pagination={pagination}
-            modules={[Pagination]}
-          >
-            {ServiceData.map(
-              ({
-                id,
-                serviceIcon,
-                serviceSubTitle,
-                serviceTitle,
-                serviceDesc,
-                btnContent,
-                contentShape,
-                serviceUrl,
-                btnIcon,
-                serviceThumbShape,
-                serviceThumb,
-                thumbIcon,
-              }) => {
-                return (
-                  <>
-                    <SwiperSlide
-                      key={id}
-                      className='pb-[70px]'
-                    >
-                      <ServiceCard
-                        serviceIcon={serviceIcon}
-                        serviceSubTilte={serviceSubTitle}
-                        serviceTitle={serviceTitle}
-                        serviceDesc={serviceDesc}
-                        btnContent={btnContent}
-                        serviceUrl={serviceUrl}
-                        btnIcon={btnIcon}
-                        contentShape={contentShape}
-                        serviceThumbShape={serviceThumbShape}
-                        serviceThumb={serviceThumb}
-                        thumbIcon={thumbIcon}
-                      />
-                    </SwiperSlide>
-                  </>
-                );
-              }
-            )}
-          </Swiper>
-        </div>
+      </div>
+      <div className='Container'>
+        <Swiper {...settings}>
+          {ServiceData.map(
+            ({
+              id,
+              serviceIcon,
+              serviceSubTitle,
+              serviceTitle,
+              serviceDesc,
+              btnContent,
+              serviceUrl,
+              btnIcon,
+              serviceThumb,
+            }) => {
+              return (
+                <>
+                  <SwiperSlide
+                    key={id}
+                    className='pt-24 md:pt-[120px] lg:pt-[150px]'
+                  >
+                    <ServiceCard
+                      serviceIcon={serviceIcon}
+                      serviceSubTilte={serviceSubTitle}
+                      serviceTitle={serviceTitle}
+                      serviceDesc={serviceDesc}
+                      btnContent={btnContent}
+                      serviceUrl={serviceUrl}
+                      btnIcon={btnIcon}
+                      serviceThumb={serviceThumb}
+                    />
+                  </SwiperSlide>
+                </>
+              );
+            }
+          )}
+          <ServiceNavigation />
+        </Swiper>
       </div>
     </section>
   );

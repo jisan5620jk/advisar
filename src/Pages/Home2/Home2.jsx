@@ -2,7 +2,6 @@ import About from '../../Component2/About/About';
 import Appointment from '../../Component2/Appointment/Appointment';
 import Banner from '../../Component2/Banner/Banner';
 import Blog from '../../Component2/Blog/Blog';
-import ContentSlider from '../../Component2/ContentSlider/ContentSlider';
 import Counter from '../../Component2/Counter/Counter';
 import Feature from '../../Component2/Feature/Feature';
 import Service from '../../Component2/Service/Service';
@@ -16,12 +15,11 @@ const Home2 = () => {
       <Banner />
       <Feature />
       <About />
-      <ContentSlider />
       <Service />
       <WhyChoose />
+      <Counter />
       <TeamMember />
       <Testimonial />
-      <Counter />
       <Appointment />
       <Blog />
     </>
