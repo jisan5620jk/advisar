@@ -1,18 +1,18 @@
-import { FaArrowRightLong } from "react-icons/fa6";
-import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb";
-import About from "../../../Component3Default/About/About";
-import Counter from "../../../Component5Default/Counter/Counter";
-import WhyChoose from "./WhyChoose/WhyChoose";
-import TeamMember from "./TeamMember/TeamMember";
-import ContentSlider from "../../../Component3Default/ContentSlider/ContentSlider";
+import { FaArrowRightLong } from 'react-icons/fa6';
+import BreadCrumb from '../../../Shared/BreadCrumb/BreadCrumb';
+import About from '../../../Component4Default/About/About';
+import Counter from '../../../Component3Default/Counter/Counter';
+import ContentSlider from '../../../Component3Default/ContentSlider/ContentSlider';
+import WhyChoose from './WhyChoose/WhyChoose';
+import TeamMember from './TeamMember/TeamMember';
 
 const AboutInner = () => {
   return (
     <>
       <BreadCrumb
-        breadCrumbTitle={"About Us"}
+        breadCrumbTitle={'About Us'}
         breadCrumbIcon={<FaArrowRightLong />}
-        breadCrumbLink={"About Us"}
+        breadCrumbLink={'About Us'}
       />
       <About />
       <Counter />

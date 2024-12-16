@@ -1,74 +1,63 @@
-import { FaArrowRightLong } from 'react-icons/fa6';
-import featureIcon from '/images/feature1.png';
-import featureIcon2 from '/images/feature2.png';
-import featureIcon3 from '/images/feature3.png';
-import FeatureCard from './FeatureCard';
+/* eslint-disable no-unused-vars */
+import featureIcon from "/images/feature-icon-1.png";
+import featureIcon2 from "/images/feature-icon-2.png";
+import featureIcon3 from "/images/feature-icon-3.png";
+import featureIcon4 from "/images/feature-icon-4.png";
+import FeatureCard from "./FeatureCard";
 
-const FeatureData = [
+const processData = [
   {
     id: 1,
     featureIcon: featureIcon,
-    featureTitle: `Strategic marketing`,
-    featureDesc:
-      'Completely mesh leveraged total main for resource maximizing applications. Credibly implement',
-    featureUrl: '/service_details',
-    featureBtnContent: 'Read More',
-    featureBtnIcon: <FaArrowRightLong />,
+    featureTitle: "22+ Year Experience",
+    featureDesc: "Completely fashion reliable more products grow business",
   },
   {
     id: 2,
     featureIcon: featureIcon2,
-    featureTitle: `Investment Planning`,
-    featureDesc:
-      'Completely mesh leveraged total main for resource maximizing applications. Credibly implement',
-    featureUrl: '/service_details',
-    featureBtnContent: 'Read More',
-    featureBtnIcon: <FaArrowRightLong />,
+    featureTitle: "Dedicated Members",
+    featureDesc: "Completely fashion reliable more products grow business",
   },
   {
     id: 3,
     featureIcon: featureIcon3,
-    featureTitle: `Insights & analytics`,
-    featureDesc:
-      'Completely mesh leveraged total main for resource maximizing applications. Credibly implement',
-    featureUrl: '/service_details',
-    featureBtnContent: 'Read More',
-    featureBtnIcon: <FaArrowRightLong />,
+    featureTitle: "Valuable Supports",
+    featureDesc: "Completely fashion reliable more products grow business",
+  },
+  {
+    id: 4,
+    featureIcon: featureIcon4,
+    featureTitle: "Valuable Supports",
+    featureDesc: "Completely fashion reliable more products grow business",
   },
 ];
 
 const Feature = () => {
   return (
-    <section id='feature' className='pt-20 md:pt-28 relative bg-Secondarycolor2-0 feature8'>
-      <div className='Container'>
-        <div className='text-center'>
-          <h5 className='font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor2-0 uppercase mb-3'>
-            FEATURED SERVICES
-          </h5>
-          <h1 className='font-FiraSans font-semibold text-white inline-block text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[34px] lg:leading-[44px] xl:text-[40px] xl:leading-[50px] 2xl:text-[42px] 2xl:leading-[52px] relative pb-4'>
-            Engaging Consulting Exceptional
-          </h1>
-        </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:items-center lg:grid-cols-3 gap-7 mt-10 features8-box'>
-          {FeatureData.map(
+    <section className="bg-white relative z-10 before:absolute before:top-0 before:left-0 before:bg-PrimaryColor-0 before:w-full before:h-1/2 before:-z-10 py-[120px]">
+      <div className="Container">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 relative z-10">
+          {processData.map(
             ({
               id,
               featureIcon,
+              featureshape,
+              featureshape2,
               featureTitle,
               featureDesc,
               featureUrl,
-              featureBtnContent,
-              featureBtnIcon,
+              featureBtn,
             }) => {
               return (
                 <div key={id}>
                   <FeatureCard
                     featureIcon={featureIcon}
+                    featureshape={featureshape}
+                    featureshape2={featureshape2}
                     featureTitle={featureTitle}
                     featureDesc={featureDesc}
                     featureUrl={featureUrl}
-                    featureBtnContent={featureBtnContent}
-                    featureBtnIcon={featureBtnIcon}
+                    featureBtn={featureBtn}
                   />
                 </div>
               );

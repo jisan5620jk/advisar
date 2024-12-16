@@ -3,38 +3,37 @@ const TestimonialCard = ({
   testiImg,
   testiRatingIcon,
   testiName,
-  testiQuate,
   testiDesignation,
   testiDesc,
+  testiQuote,
 }) => {
   return (
-    <div className='flex flex-col lg:items-center lg:flex-row gap-5 md:gap-4 xl:gap-9 pb-8 border-b border-BorderColor2-0'>
-      <div>
+    <div className="flex flex-col sm:flex-row sm:px-5 md:px-0 lg:pl-6 lg:py-6 xl:p-0 sm:items-center gap-8 bg-BodyBg4-0 rounded-xl overflow-hidden relative group z-10">
+      <div className="relative z-10">
         <img
           src={testiImg}
-          draggable='false'
+          draggable={false}
+          className="sm:w-28 md:w-full 2xl:w-[inherit]"
         />
       </div>
-      <div className='flex-1'>
-        <p className='text-5xl text-PrimaryColor2-0'>{testiQuate}</p>
-        <div className='flex items-center justify-between mt-[18px]'>
-          <ul className='flex items-center gap-1'>
-            <li className='text-[#ff9c00] text-lg'>{testiRatingIcon}</li>
-            <li className='text-[#ff9c00] text-lg'>{testiRatingIcon}</li>
-            <li className='text-[#ff9c00] text-lg'>{testiRatingIcon}</li>
-            <li className='text-[#ff9c00] text-lg'>{testiRatingIcon}</li>
-            <li className='text-[#ff9c00] text-lg'>{testiRatingIcon}</li>
-          </ul>
+      <div className="flex-1 lg:flex-[inherit] xl:flex-1 rounded overflow-hidden relative z-10 pl-5 pb-5 sm:py-7 md:py-0 sm:pl-0 mr-8">
+        <div className="transition-all duration-500">
+          <img src={testiQuote} draggable="false" />
         </div>
-        <p className='font-FiraSans text-base sm:text-xl md:text-2xl md:leading-[38px] italic text-HeadingColor2-0 pt-5 mb-7'>
+        <ul className="flex gap-[2px] items-center mt-4">
+          <li className="text-[#ffb609] text-[22px]">{testiRatingIcon}</li>
+          <li className="text-[#ffb609] text-[22px]">{testiRatingIcon}</li>
+          <li className="text-[#ffb609] text-[22px]">{testiRatingIcon}</li>
+          <li className="text-[#ffb609] text-[22px]">{testiRatingIcon}</li>
+          <li className="text-[#ffb609] text-[22px]">{testiRatingIcon}</li>
+        </ul>
+        <p className="font-FiraSans text-TextColor2-0 mt-4 text-sm sm:text-base">
           {testiDesc}
         </p>
-        <h5 className='font-FiraSans font-medium text-HeadingColor2-0 text-xl transition-all duration-500 group-hover:text-white'>
+        <h5 className="font-FiraSans font-semibold text-HeadingColor-0 text-xl mt-5 mb-2">
           {testiName}
         </h5>
-        <p className='font-FiraSans text-[15px] text-TextColor2-0 transition-all duration-500 group-hover:text-white pt-2'>
-          {testiDesignation}
-        </p>
+        <p className="font-FiraSans text-TextColor2-0">{testiDesignation}</p>
       </div>
     </div>
   );

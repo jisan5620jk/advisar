@@ -1,39 +1,37 @@
-/* eslint-disable no-unused-vars */
-import testiImg from "/images/testi_author2.png";
-import testiQuote from "/images/testi_icon2.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { MdOutlineStarPurple500 } from "react-icons/md";
-import TestimonialCard from "./TestimonialCard";
-import CountUp from "react-countup";
-import { FaStar, FaStarHalfAlt } from "react-icons/fa";
-import TestimonialNavigation from "./TestimonialNavigation";
-import Brand from "../Brand/Brand";
+import testiImg from '/images/testi_img.png';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import TestimonialCard from './TestimonialCard';
+import { IoStar } from 'react-icons/io5';
+import { RiDoubleQuotesR } from 'react-icons/ri';
+import ServiceNavigation from './ServiceNavigation';
+import testiShape from '/images/testi_shape.png';
+import Blog from '../Blog/Blog';
 
 const testiData = [
   {
     id: 1,
-    testiQuote: testiQuote,
     testiImg: testiImg,
-    testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiName: "Hemilton Masakajja",
-    testiDesignation: "Web Developer",
-    testiDesc: `Conveniently transform error-free architectures
-                diness vis-a-vis equity invested Appropriately in
-                underwhelm  proactive leadership skills without 
-                future applications Consultant`,
+    testiRatingIcon: <IoStar />,
+    testiQuate: <RiDoubleQuotesR />,
+    testiName: 'Jhon D. Alexon',
+    testiDesignation: 'Web Developer',
+    testiDesc: `“Conveniently transform error-free architectures whereas transform the
+									maximizing collaboration and idea-sharing. Intrinsicly an maintaince
+									team driven web-readiness vis-a-vis equity invested the moderns
+									Appropriately underwhelm”`,
   },
   {
     id: 2,
-    testiQuote: testiQuote,
     testiImg: testiImg,
-    testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiName: "Jhon D. Alexon",
-    testiDesignation: "UI/UX Designer",
-    testiDesc: `Conveniently transform error-free architectures
-                diness vis-a-vis equity invested Appropriately in
-                underwhelm  proactive leadership skills without 
-                future applications Consultant`,
+    testiRatingIcon: <IoStar />,
+    testiQuate: <RiDoubleQuotesR />,
+    testiName: 'David Miller',
+    testiDesignation: 'UI/UX Designer',
+    testiDesc: `“Conveniently transform error-free architectures whereas transform the
+									maximizing collaboration and idea-sharing. Intrinsicly an maintaince
+									team driven web-readiness vis-a-vis equity invested the moderns
+									Appropriately underwhelm”`,
   },
 ];
 
@@ -43,96 +41,76 @@ const Testimonial = () => {
     spaceBetween: 30,
     speed: 1000,
     autoplay: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 1,
+      },
+      992: {
+        slidesPerView: 1,
+      },
+      1400: {
+        slidesPerView: 1,
+      },
+    },
   };
   return (
-    <section className="pt-28 pb-[98px] bg-BodyBg2-0 relative z-10 overflow-hidden">
-      <div className="Container">
-        <div className="grid grid-cols-6 gap-10 lg:gap-0 lg:grid-cols-12">
-          <div className="col-span-6 lg:col-span-5">
-            <h5 className="font-FiraSans font-medium text-sm sm:text-base text-white uppercase mb-3">
-              Testimonial
+    <section className='bg-Secondarycolor2-0 relative z-10'>
+      <img
+        src={testiShape}
+        alt='Shape'
+        className='absolute top-28 right-1/3 invert-[1] opacity-50 size-[148px] animate-rotate hidden xl:block'
+      />
+      <div className='Container pb-14 md:pb-20 lg:pb-[120px]'>
+        <div className='flex justify-between flex-wrap items-center mb-4 md:-mb-[100px] lg:-mb-[130px]'>
+          <div>
+            <h5 className='font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor2-0 uppercase mb-3'>
+              TESTIMONIALS
             </h5>
-            <h1 className="font-FiraSans font-semibold text-white text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[34px] lg:leading-[44px] xl:text-[40px] xl:leading-[50px] 2xl:text-[42px] 2xl:leading-[52px] mb-4">
-              Trusted By The Genius <br /> People With Cosult
+            <h1 className='font-FiraSans font-semibold text-white inline-block text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[34px] lg:leading-[44px] xl:text-[40px] xl:leading-[50px] 2xl:text-[42px] 2xl:leading-[52px] relative pb-4'>
+              What Says our Satisfied Clients <br />
+              About Consultant Service
             </h1>
-            <p className="font-FiraSans text-TextColor-0 mb-7">
-              Media leadership skills before cross-media innovation <br className="hidden sm:block lg:hidden xl:block"/>{" "}
-              develop standardized platforms without
-            </p>
-            <div className="relative flex items-center gap-5 border-t border-BorderColor2-0 sm:mr-10 pt-8">
-              <div className="border-r border-BorderColor2-0 pr-5">
-                <CountUp
-                  start={-11}
-                  prefix="4."
-                  end={98}
-                  suffix={""}
-                  className="font-FiraSans text-4xl leading-[26px] md:text-[56px] md:leading-[40px] text-white font-medium"
-                />
-              </div>
-              <div>
-                <ul className="flex items-center gap-1">
-                  <li className="text-[#ffb609]">
-                    <FaStar size={"18"} />
-                  </li>
-                  <li className="text-[#ffb609]">
-                    <FaStar size={"18"} />
-                  </li>
-                  <li className="text-[#ffb609]">
-                    <FaStar size={"18"} />
-                  </li>
-                  <li className="text-[#ffb609]">
-                    <FaStar size={"18"} />
-                  </li>
-                  <li className="text-[#ffb609]">
-                    <FaStarHalfAlt size={"18"} />
-                  </li>
-                </ul>
-                <p className="font-FiraSans sm:text-lg text-TextColor-0 capitalize mt-2">
-                  Avg. Clients Ratings
-                </p>
-              </div>
-            </div>
           </div>
-          <div className="col-span-6 lg:col-span-7 relative">
-            <Swiper {...settings}>
-              <div>
-                {testiData.map(
-                  ({
-                    id,
-                    testiQuote,
-                    testiImg,
-                    testiRatingIcon,
-                    testiName,
-                    testiDesignation,
-                    testiDesc,
-                    testiShape,
-                  }) => {
-                    return (
-                      <SwiperSlide key={id}>
-                        <div className="pr-6">
-                          <TestimonialCard
-                            testiQuote={testiQuote}
-                            testiImg={testiImg}
-                            testiRatingIcon={testiRatingIcon}
-                            testiName={testiName}
-                            testiDesignation={testiDesignation}
-                            testiDesc={testiDesc}
-                            testiShape={testiShape}
-                          />
-                        </div>
-                      </SwiperSlide>
-                    );
-                  }
-                )}
-              </div>
-              <TestimonialNavigation />
-            </Swiper>
-          </div>
+          <div></div>
         </div>
-        <Brand />
+        <div className='mt-[30px]'>
+          <Swiper {...settings}>
+            <div>
+              {testiData.map(
+                ({
+                  id,
+                  testiImg,
+                  testiRatingIcon,
+                  testiQuate,
+                  testiName,
+                  testiDesignation,
+                  testiDesc,
+                }) => {
+                  return (
+                    <SwiperSlide key={id}>
+                      <div className='pt-24 md:pt-[120px] lg:pt-[132px]'>
+                        <TestimonialCard
+                          testiImg={testiImg}
+                          testiRatingIcon={testiRatingIcon}
+                          testiQuate={testiQuate}
+                          testiName={testiName}
+                          testiDesignation={testiDesignation}
+                          testiDesc={testiDesc}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  );
+                }
+              )}
+            </div>
+            <ServiceNavigation />
+          </Swiper>
+        </div>
       </div>
+      <Blog />
     </section>
   );
 };

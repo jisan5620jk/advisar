@@ -1,91 +1,104 @@
 import { Link } from "react-router-dom";
-import bannerThumb from "/images/hero_thumb_2.png";
-import bannerShape from "/images/hero_dot_shape.png";
-import bannerShape2 from "/images/hero_shape1.png";
-import bannerShape3 from "/images/hero_shape2.png";
-import { useState } from "react";
-import FsLightbox from "fslightbox-react";
-import { FaRegThumbsUp } from "react-icons/fa";
-import { LuSquarePlay } from "react-icons/lu";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "./banner.css";
+import "swiper/css/pagination";
+import BannerNavigation from "./BannerNavigation";
+import { HiOutlineArrowRight } from "react-icons/hi";
+import { LuArrowDown } from "react-icons/lu";
 
 const Banner = () => {
-  const [toggler, setToggler] = useState(false);
+  const settings = {
+    loop: true,
+    speed: 2000,
+    effect: "fade",
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    duration: 3000,
+  };
   return (
-    <section className="bg-[url('/images/banner_2.png')] bg-cover bg-center bg-no-repeat h-[900px] sm:h-[1100px] md:h-[1300px] lg:h-[700px] xl:h-[780px] 2xl:h-[900px] flex items-center relative z-10 overflow-hidden">
-      <div className='Container'>
-        <div className='grid lg:grid-cols-2 items-center gap-16 lg:gap-0 mt-[72px]'>
-          <div className='relative'>
-            <h5 className='font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase mb-3'>
-              FINANCE CONSULTING
-            </h5>
-            <h1 className='font-FiraSans font-semibold text-white text-[26px] leading-[32px] sm:text-[46px] sm:leading-[52px] md:text-[68x] lg:text-[46px] xl:text-[54px] xl:leading-[68px] 2xl:text-[56px] 2xl:leading-[70px]'>
-              Digital Finance Const.
-              <br />
-              Growing Business
-            </h1>
-            <p className='font-FiraSans text-TextColor-0 mb-[38px] mt-[22px]'>
-              Continually plagiarize virtual web services with resource{' '}
-              <br className='hidden xl:block 2xl:hidden' />
-              maximizing <br className='hidden 2xl:block' /> action items.
-              Globally build front-end
-            </p>
-            <div className='flex flex-col sm:flex-row sm:items-center gap-8'>
-              <Link to={'/contact'}>
-                <button className='primary-btn2'>
-                  <FaRegThumbsUp />
-                  {`Get Started now`}
-                </button>
-              </Link>
-              <div>
-                <button
-                  className='flex items-center gap-3 text-white font-FiraSans font-medium'
-                  onClick={() => setToggler(!toggler)}
-                >
-                  <LuSquarePlay
-                    size={'24'}
-                    className='text-white'
-                  />
-                  How It Works
-                </button>
-                <FsLightbox
-                  toggler={toggler}
-                  sources={[
-                    'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-                  ]}
-                />
+    <div className='relative px-2 xl:px-5'>
+      <div className='absolute z-50 left-1/2 -translate-x-1/2 bottom-[50px]'>
+        <a href={'#feature'}>
+          <button className='w-[30px] h-[60px] rounded-full border border-TextColor-0 flex items-end justify-center text-TextColor-0 text-[26px]'>
+            <span className='animate-wiggle -mb-[18px]'>
+              <LuArrowDown />
+            </span>
+          </button>
+        </a>
+      </div>
+      <Swiper {...settings}>
+        <SwiperSlide>
+          <section className="bg-[url('/images/slider_bg.jpg')] bg-cover bg-center bg-no-repeat h-[600px] sm:h-[700px] md:h-[600px] lg:h-[660px] xl:h-[800px] flex items-center rounded-b-2xl sm:rounded-b-3xl md:rounded-b-[40px] 2xl:rounded-b-[140px]">
+            <div className='Container'>
+              <div className='relative banner-content'>
+                <h1 className='font-FiraSans font-semibold text-white text-[26px] leading-[36px] sm:text-[46px] sm:leading-[52px] md:text-[68x] lg:text-[50px] xl:text-[54px] xl:leading-[68px] 2xl:text-[56px] 2xl:leading-[70px]'>
+                  Crafting the Digital
+                  <br />
+                  Solutions for Business
+                </h1>
+                <p className='font-FiraSans text-TextColor-0 mb-[38px] mt-[16px]'>
+                  Continually plagiarize virtual web services with resource{' '}
+                  <br className='hidden xl:block 2xl:hidden' />
+                  maximizing{' '}
+                  <br className='hidden md:block xl:hidden 2xl:block' /> action
+                  items. Globally build front-end
+                </p>
+                <div className='flex flex-col sm:flex-row sm:items-center gap-8'>
+                  <Link to={'/contact'}>
+                    <button className='primary-btn4'>{`Get Started now`}</button>
+                  </Link>
+                  <Link to={'/about'}>
+                    <button className='flex items-center gap-2 text-white font-FiraSans font-medium group'>
+                      Learn More{' '}
+                      <span className='-rotate-45 transition-all duration-500 group-hover:rotate-0'>
+                        <HiOutlineArrowRight />
+                      </span>
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
-            <img
-              src={bannerShape2}
-              draggable='false'
-              className='absolute bottom-0 right-14 animate-zoomInOut'
-            />
-          </div>
-          <div className='flex justify-center lg:justify-end'>
-            <img
-              src={bannerThumb}
-              draggable='false'
-              className='-mb-40 md:-mb-56 lg:-mb-44 2xl:max-w-[inherit] '
-            />
-          </div>
-        </div>
-      </div>
-      <img
-        src={bannerShape}
-        draggable={false}
-        className='absolute -z-10 top-52 2xl:top-[200px] left-[40%] md:left-3/4 lg:left-[40%] -translate-x-1/2 animate-wiggle hidden sm:block'
-      />
-      <img
-        src={bannerShape2}
-        draggable={false}
-        className='absolute -z-10 top-52 2xl:top-[200px] left-[90%] md:left-3/4 lg:left-[90%] -translate-x-1/2 animate-wiggle hidden sm:block'
-      />
-      <img
-        src={bannerShape3}
-        draggable={false}
-        className='absolute -z-10 top-1/2 left-0  -translate-x-1/2 animate-dance2 hidden sm:block'
-      />
-    </section>
+          </section>
+        </SwiperSlide>
+        <SwiperSlide>
+          <section className="bg-[url('/images/banner2.png')] bg-cover bg-center bg-no-repeat h-[600px] sm:h-[700px] md:h-[600px] lg:h-[660px] xl:h-[800px] flex items-center rounded-b-2xl sm:rounded-b-3xl md:rounded-b-[40px] 2xl:rounded-b-[140px]">
+            <div className='Container'>
+              <div className='relative banner-content'>
+                <h1 className='font-FiraSans font-semibold text-white text-[26px] leading-[36px] sm:text-[46px] sm:leading-[52px] md:text-[68x] lg:text-[50px] xl:text-[54px] xl:leading-[68px] 2xl:text-[56px] 2xl:leading-[70px]'>
+                  Crafting the Digital
+                  <br />
+                  Solutions for Business
+                </h1>
+                <p className='font-FiraSans text-TextColor-0 mb-[38px] mt-[16px]'>
+                  Continually plagiarize virtual web services with resource{' '}
+                  <br className='hidden xl:block 2xl:hidden' />
+                  maximizing{' '}
+                  <br className='hidden md:block xl:hidden 2xl:block' /> action
+                  items. Globally build front-end
+                </p>
+                <div className='flex flex-col sm:flex-row sm:items-center gap-8'>
+                  <Link to={'/contact'}>
+                    <button className='primary-btn4'>{`Get Started now`}</button>
+                  </Link>
+                  <Link to={'/about'}>
+                    <button className='flex items-center gap-2 text-white font-FiraSans font-medium group'>
+                      Learn More{' '}
+                      <span className='-rotate-45 transition-all duration-500 group-hover:rotate-0'>
+                        <HiOutlineArrowRight />
+                      </span>
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        </SwiperSlide>
+        <BannerNavigation />
+      </Swiper>
+    </div>
   );
 };
 

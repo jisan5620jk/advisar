@@ -284,57 +284,39 @@ const Navbar3 = () => {
                         </span>
                       </Link>
                       <ul className='submenu'>
+                        <li>
+                          <Link to={'/'}>IT Consulting</Link>
+                        </li>
+                        <li>
+                          <Link to={'/home2'}>Business Advising</Link>
+                        </li>
                         <li className='has-dropdown'>
-                          <Link to={'/'}>
+                          <Link to={'/home3'}>
                             Buseness Consulting 01
                             <span>
                               <FaChevronDown />
                             </span>
                           </Link>
-                          <ul className='submenu !-top-[3px]'>
+                          <ul className='submenu !top-[102px]'>
                             <li>
-                              <Link to={'/'}>Buseness Consulting Creative</Link>
+                              <Link to={'/home3'}>
+                                Buseness Consulting Creative
+                              </Link>
                             </li>
                             <li>
-                              <Link to={'/home2'}>
+                              <Link to={'/home4'}>
                                 Buseness Consulting Classic
                               </Link>
                             </li>
                             <li>
-                              <Link to={'/home3'}>
+                              <Link to={'/home5'}>
                                 Buseness Consulting Dark
                               </Link>
                             </li>
                           </ul>
                         </li>
                         <li className='has-dropdown'>
-                          <Link to={'/home4'}>
-                            Finance Consulting
-                            <span>
-                              <FaChevronDown />
-                            </span>
-                          </Link>
-                          <ul className='submenu !top-[50px]'>
-                            <li>
-                              <Link to={'/home4'}>
-                                Finance Consulting Creative
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to={'/home5'}>
-                                Finance Consulting Classic
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to={'/home6'}>Finance Consulting Dark</Link>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <Link to={'/home7'}>IT Consulting</Link>
-                        </li>
-                        <li className='has-dropdown'>
-                          <Link to={'/home8'}>
+                          <Link to={'/home6'}>
                             Buseness Consulting 02
                             <span>
                               <FaChevronDown />
@@ -342,18 +324,43 @@ const Navbar3 = () => {
                           </Link>
                           <ul className='submenu !top-[154px]'>
                             <li>
-                              <Link to={'/home8'}>
+                              <Link to={'/home6'}>
                                 Buseness Consulting Creative
                               </Link>
                             </li>
                             <li>
-                              <Link to={'/home9'}>
+                              <Link to={'/home7'}>
                                 Buseness Consulting Classic
                               </Link>
                             </li>
                             <li>
-                              <Link to={'/home10'}>
+                              <Link to={'/home8'}>
                                 Buseness Consulting Dark
+                              </Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li className='has-dropdown'>
+                          <Link to={'/home9'}>
+                            Finance Consulting
+                            <span>
+                              <FaChevronDown />
+                            </span>
+                          </Link>
+                          <ul className='submenu !top-[206px]'>
+                            <li>
+                              <Link to={'/home9'}>
+                                Finance Consulting Creative
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to={'/home10'}>
+                                Finance Consulting Classic
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to={'/home11'}>
+                                Finance Consulting Dark
                               </Link>
                             </li>
                           </ul>
@@ -443,16 +450,6 @@ const Navbar3 = () => {
                       <ul className='submenu'>
                         <li>
                           <Link to={'/blog_grid'}>blog grid</Link>
-                        </li>
-                        <li>
-                          <Link to={'/blog_right_sibebar'}>
-                            blog right sidebar
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={'/blog_left_sibebar'}>
-                            blog left sidebar
-                          </Link>
                         </li>
                         <li>
                           <Link to={'/blog_details'}>blog details</Link>

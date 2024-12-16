@@ -1,14 +1,14 @@
-import About from "../../Component4Dark/About/About";
-import Appionment from "../../Component4Dark/Appionment/Appionment";
-import Banner from "../../Component4Dark/Banner/Banner";
-import Brand from "../../Component4Dark/Brand/Brand";
-import TickerAnimation from "../../Component4Dark/ContentSlider/TickerAnimation";
-import Feature from "../../Component4Dark/Feature/Feature";
-import Process from "../../Component4Dark/Process/Process";
-import Service from "../../Component4Dark/Service/Service";
-import TeamMember from "../../Component4Dark/TeamMember/TeamMember";
-import Testimonial from "../../Component4Dark/Testimonial/Testimonial";
-import Work from "../../Component4Dark/Work/Work";
+import About from '../../Component5Classic/About/About';
+import Appionment from '../../Component5Classic/Appionment/Appionment';
+import Banner from '../../Component5Classic/Banner/Banner';
+import Brand from '../../Component5Classic/Brand/Brand';
+import TickerAnimation from '../../Component5Classic/ContentSlider/TickerAnimation';
+import Feature from '../../Component5Classic/Feature/Feature';
+import Process from '../../Component5Classic/Process/Process';
+import Service from '../../Component5Classic/Service/Service';
+import TeamMember from '../../Component5Classic/TeamMember/TeamMember';
+import Testimonial from '../../Component5Classic/Testimonial/Testimonial';
+import Work from '../../Component5Classic/Work/Work';
 
 const Home10 = () => {
   return (

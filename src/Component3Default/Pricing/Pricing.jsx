@@ -1,43 +1,43 @@
-import { Link } from 'react-router-dom';
-import { FaArrowRightLong } from 'react-icons/fa6';
-import CountUp from 'react-countup';
-import { useEffect } from 'react';
-import pricingIcon from '/images/price_icon_01.png';
-import pricingIcon2 from '/images/price_icon_02.png';
-import icon from '/images/icon.png';
+import { Link } from "react-router-dom";
+import { FaArrowRightLong } from "react-icons/fa6";
+import CountUp from "react-countup";
+import { useEffect } from "react";
+import pricingIcon from "/images/price_icon_01.png";
+import pricingIcon2 from "/images/price_icon_02.png";
+import icon from "/images/icon.png";
 
 const Pricing = () => {
   useEffect(() => {
     const handleMouseEnter = (event) => {
-      event.target.classList.add('active');
+      event.target.classList.add("active");
 
       // Remove 'active' class from siblings
       const parent = event.target.parentElement;
       if (parent) {
-        const siblings = parent.querySelectorAll('.pricing-box');
+        const siblings = parent.querySelectorAll(".pricing-box");
         siblings.forEach((sibling) => {
           if (sibling !== event.target) {
-            sibling.classList.remove('active');
+            sibling.classList.remove("active");
           }
         });
       }
     };
 
-    const elements = document.querySelectorAll('.pricing-box');
+    const elements = document.querySelectorAll(".pricing-box");
     elements.forEach((element) => {
-      element.addEventListener('mouseenter', handleMouseEnter);
+      element.addEventListener("mouseenter", handleMouseEnter);
     });
 
     // Clean up event listeners when component unmounts
     return () => {
       elements.forEach((element) => {
-        element.removeEventListener('mouseenter', handleMouseEnter);
+        element.removeEventListener("mouseenter", handleMouseEnter);
       });
     };
   }, []);
 
   return (
-    <section className='relative overflow-hidden pt-[160px] pb-[120px] bg-BodyBg2-0'>
+    <section className='mx-2 xl:mx-5 relative overflow-hidden pt-[160px] pb-[120px] bg-BodyBg2-0 rounded-b-[40px]'>
       <div className='Container'>
         <div className='grid grid-cols-6 gap-10 lg:gap-0 lg:grid-cols-12'>
           <div className='col-span-6 lg:col-span-5 w-full mx-auto mr-10'>
@@ -127,7 +127,7 @@ const Pricing = () => {
                 </h6>
               </div>
               <Link
-                to={'/'}
+                to={'/pricing'}
                 className='flex justify-start'
               >
                 <button className='pricing-btn text-left font-FiraSans border rounded-full text-PrimaryColor-0 px-8 py-[10px] transition-all duration-500 group-hover:text-white relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-PrimaryColor-0 before:rounded-full before:scale-0 before:-z-10 before:transition-all before:duration-500 group-hover:before:scale-100'>
@@ -200,7 +200,7 @@ const Pricing = () => {
                 </h6>
               </div>
               <Link
-                to={'/'}
+                to={'/pricing'}
                 className='flex justify-start'
               >
                 <button className='pricing-btn text-left font-FiraSans border rounded-full text-PrimaryColor-0 px-8 py-[10px] transition-all duration-500 group-hover:text-white relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-PrimaryColor-0 before:rounded-full before:scale-0 before:-z-10 before:transition-all before:duration-500 group-hover:before:scale-100'>

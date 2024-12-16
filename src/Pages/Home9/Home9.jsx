@@ -1,14 +1,14 @@
-import About from "../../Component4Classic/About/About";
-import Appionment from "../../Component4Classic/Appionment/Appionment";
-import Banner from "../../Component4Classic/Banner/Banner";
-import Brand from "../../Component4Classic/Brand/Brand";
-import TickerAnimation from "../../Component4Classic/ContentSlider/TickerAnimation";
-import Feature from "../../Component4Classic/Feature/Feature";
-import Process from "../../Component4Classic/Process/Process";
-import Service from "../../Component4Classic/Service/Service";
-import TeamMember from "../../Component4Classic/TeamMember/TeamMember";
-import Testimonial from "../../Component4Classic/Testimonial/Testimonial";
-import Work from "../../Component4Classic/Work/Work";
+import About from '../../Component5Default/About/About';
+import Appionment from '../../Component5Default/Appionment/Appionment';
+import Banner from '../../Component5Default/Banner/Banner';
+import Brand from '../../Component5Default/Brand/Brand';
+import TickerAnimation from '../../Component5Default/ContentSlider/TickerAnimation';
+import Feature from '../../Component5Default/Feature/Feature';
+import Process from '../../Component5Default/Process/Process';
+import Service from '../../Component5Default/Service/Service';
+import TeamMember from '../../Component5Default/TeamMember/TeamMember';
+import Testimonial from '../../Component5Default/Testimonial/Testimonial';
+import Work from '../../Component5Default/Work/Work';
 
 const Home9 = () => {
   return (

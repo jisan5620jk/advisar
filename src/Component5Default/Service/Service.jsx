@@ -1,110 +1,69 @@
-/* eslint-disable no-unused-vars */
-import serviceThumb from "/images/service_3.png";
-import serviceThumb2 from "/images/service_4.png";
-import serviceIcon from "/images/service_icon1.png";
-import serviceIcon2 from "/images/service_icon2.png";
-import serviceShape from "/images/service_shape1.png";
-import serviceShape2 from "/images/service_shape2.png";
-import ServiceCard from "./ServiceCard";
-import { GoArrowUpRight } from "react-icons/go";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import ServiceNavigation from "./ServiceNavigation";
+import serviceIcon from '/images/service1.png';
+import serviceIcon2 from '/images/service2.png';
+import serviceIcon3 from '/images/service3.png';
+import serviceIcon4 from '/images/service4.png';
+import ServiceCard from './ServiceCard';
+import { HiOutlineArrowUpRight } from 'react-icons/hi2';
+import './service.css';
+import { Link } from 'react-router-dom';
 
 const ServiceData = [
   {
     id: 1,
     serviceIcon: serviceIcon,
-    serviceSubTitle: "Finance",
-    serviceTitle: "Investment Idea",
-    serviceDesc: "Business visualize strategic informatic beanchmark",
-    serviceUrl: "/service_details",
-    btnContent: "View Details",
-    btnIcon: <GoArrowUpRight />,
-    serviceThumb: serviceThumb,
+    serviceSubTitle: 'Solutions',
+    serviceTitle: 'Creative Design Works',
+    serviceDesc: 'Seamlessly expedite extensible methodologies benchmark',
+    serviceUrl: '/service_details',
+    serviceBtn: <HiOutlineArrowUpRight />,
   },
   {
     id: 2,
     serviceIcon: serviceIcon2,
-    serviceSubTitle: "Finance",
-    serviceTitle: "Investment Idea",
-    serviceDesc: "Business visualize strategic informatic beanchmark",
-    serviceUrl: "/service_details",
-    btnContent: "View Details",
-    btnIcon: <GoArrowUpRight />,
-    serviceThumb: serviceThumb2,
+    serviceSubTitle: 'Solutions',
+    serviceTitle: 'Human Resources',
+    serviceDesc: 'Seamlessly expedite extensible methodologies benchmark',
+    serviceUrl: '/service_details',
+    serviceBtn: <HiOutlineArrowUpRight />,
   },
   {
     id: 3,
-    serviceIcon: serviceIcon,
-    serviceSubTitle: "Finance",
-    serviceTitle: "Investment Idea",
-    serviceDesc: "Business visualize strategic informatic beanchmark",
-    serviceUrl: "/service_details",
-    btnContent: "View Details",
-    btnIcon: <GoArrowUpRight />,
-    serviceThumb: serviceThumb,
+    serviceIcon: serviceIcon3,
+    serviceSubTitle: 'Development',
+    serviceTitle: 'Global Business Const',
+    serviceDesc: 'Seamlessly expedite extensible methodologies benchmark',
+    serviceUrl: '/service_details',
+    serviceBtn: <HiOutlineArrowUpRight />,
   },
   {
     id: 4,
-    serviceIcon: serviceIcon2,
-    serviceSubTitle: "Finance",
-    serviceTitle: "Investment Idea",
-    serviceDesc: "Business visualize strategic informatic beanchmark",
-    serviceUrl: "/service_details",
-    btnContent: "View Details",
-    btnIcon: <GoArrowUpRight />,
-    serviceThumb: serviceThumb2,
+    serviceIcon: serviceIcon4,
+    serviceSubTitle: 'Consult',
+    serviceTitle: 'Insurence Consulting',
+    serviceDesc: 'Seamlessly expedite extensible methodologies benchmark',
+    serviceUrl: '/service_details',
+    serviceBtn: <HiOutlineArrowUpRight />,
   },
 ];
 
 const Service = () => {
-  const settings = {
-    loop: true,
-    spaceBetween: 30,
-    speed: 1000,
-    initialSlide: 1,
-    autoplay: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 1.5,
-      },
-      992: {
-        slidesPerView: 2,
-      },
-      1400: {
-        slidesPerView: 2.5,
-      },
-    },
-  };
-
   return (
-    <section className="relative z-10 pt-28 pb-[120px] bg-BodyBg4-0">
-      <div className="absolute -z-10 top-40 left-0 hidden 2xl:block">
-        <div className="relative animate-wiggle">
-          <img src={serviceShape2} draggable="false" />
-          <img
-            src={serviceShape}
-            draggable="false"
-            className="absolute top-[40%] left-28 animate-rotational"
-          />
-        </div>
-      </div>
-      <div className="Container">
-        <div className="mb-4 md:-mb-[100px] lg:-mb-[120px]">
-          <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase mb-3">
-            SERVICES WE PROVIDE
+    <section className='pt-20 md:pt-28 pb-20 md:pb-[120px] bg-white relative z-10 service8'>
+      <div className='Container'>
+        <div className='text-center'>
+          <h5 className='font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor2-0 uppercase mb-3'>
+            SERVICES WE PROVIDES
           </h5>
-          <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[34px] lg:leading-[44px] xl:text-[40px] xl:leading-[50px] 2xl:text-[42px] 2xl:leading-[52px] mb-4">
-            Individuals offer Professional <br /> Services we Provide
+          <h1 className='font-FiraSans font-semibold text-HeadingColor2-0 inline-block text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[34px] lg:leading-[44px] xl:text-[40px] xl:leading-[50px] 2xl:text-[42px] 2xl:leading-[52px] relative pb-4'>
+            Engaging Consulting exceptional <br />
+            Business Solutions
           </h1>
+          <p className='font-FiraSans text-TextColor2-0 pb-6 max-w-[565px] w-full mx-auto'>
+            Seamlessly expedite extensible catalysts for change rather than 24/7
+            services methodologies. Appropriately benchmark innovative
+          </p>
         </div>
-      </div>
-      <div className="ml-0 lg:ml-7 xl:ml-[46px] 2xl:ml-[314px]">
-        <Swiper {...settings}>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 mt-[54px] services8-box'>
           {ServiceData.map(
             ({
               id,
@@ -112,31 +71,41 @@ const Service = () => {
               serviceSubTitle,
               serviceTitle,
               serviceDesc,
-              btnContent,
               serviceUrl,
-              btnIcon,
-              serviceThumb,
+              serviceBtn,
             }) => {
               return (
                 <>
-                  <SwiperSlide key={id} className="pt-24 md:pt-[120px] lg:pt-[150px]">
+                  <div
+                    key={id}
+                    className='service8-box'
+                  >
                     <ServiceCard
                       serviceIcon={serviceIcon}
-                      serviceSubTilte={serviceSubTitle}
+                      serviceSubTitle={serviceSubTitle}
                       serviceTitle={serviceTitle}
                       serviceDesc={serviceDesc}
-                      btnContent={btnContent}
                       serviceUrl={serviceUrl}
-                      btnIcon={btnIcon}
-                      serviceThumb={serviceThumb}
+                      serviceBtn={serviceBtn}
                     />
-                  </SwiperSlide>
+                  </div>
                 </>
               );
             }
           )}
-          <ServiceNavigation />
-        </Swiper>
+        </div>
+        <div className='flex items-center justify-center text-center mt-14 px-7 mx-auto'>
+          <p className='font-FiraSans text-[15px] text-HeadingColor2-0'>
+            Feel free to reach out to our consulting{' '}
+            <Link
+              to={'/service'}
+              className='text-PrimaryColor2-0 underline'
+            >
+              Services
+            </Link>{' '}
+            for inquiries and assistance.
+          </p>
+        </div>
       </div>
     </section>
   );

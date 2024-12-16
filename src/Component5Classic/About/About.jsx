@@ -1,112 +1,105 @@
-import aboutThumb from "/images/about_2.png";
-import aboutShape from "/images/about_shape2.png";
-import aboutIcon from "/images/about_icon1.png";
-import aboutIcon2 from "/images/about_icon2.png";
-import thumb from "/images/like.png";
+import aboutThumb from "/images/about8_thumb.png";
 import { Link } from "react-router-dom";
-import { FaRegThumbsUp } from "react-icons/fa";
-import { GoArrowUpRight } from "react-icons/go";
+import CountUp from "react-countup";
+import { BsCheckLg } from "react-icons/bs";
 
 const About = () => {
   return (
-    <section className="pb-[120px] pt-[170px] relative z-10">
-      <div className="Container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 lg:gap-10 2xl:gap-16 items-center">
-          <div className="relative z-10">
-            <img
-              src={aboutThumb}
-              draggable="false"
-              className="w-full 2xl:w-[inherit]"
-            />
-            <div className="absolute -top-4 sm:-top-16 right-9 md:-top-8 sm:right-12 md:right-24 2xl:-top-[70px] 2xl:right-[56px] size-[74px] sm:size-[142px] lg:size-[120px] xl:size-[180px] bg-BodyBg4-0 rounded-full flex items-center justify-center">
-              <div className="size-14 sm:size-24 lg:size-28 xl:size-[120px] animate-rotational ">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 250.5 250.5"
-                  className="overflow-visible"
-                >
-                  <path
-                    d="M.25,125.25a125,125,0,1,1,125,125,125,125,0,0,1-125-125"
-                    id="e-path-35ee1b2"
-                    className="fill-transparent"
-                  ></path>
-                  <text className="font-FiraSans text-[32px] uppercase">
-                    <textPath
-                      id="e-text-path-35ee1b2"
-                      href="#e-path-35ee1b2"
-                      startOffset="0%"
-                      className="fill-HeadingColor-0"
-                    >
-                      * Business Const. * Agency 2024 * Finance Consult
-                    </textPath>
-                  </text>
-                </svg>
+    <section className='relative z-10 bg-BodyBg-0 overflow-hidden'>
+      <div className='bg-Secondarycolor2-0 pt-20 md:pt-28 pb-20 md:pb-[120px] xl:pb-[92px] 2xl:pb-[120px]'>
+        <div className='Container'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-[92px] lg:gap-10 2xl:gap-[92px]'>
+            <div className='relative'>
+              <h5 className='font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor2-0 uppercase mb-3'>
+                ABOUT CONTACT
+              </h5>
+              <h1 className='font-FiraSans font-semibold text-white inline-block text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[34px] lg:leading-[44px] xl:text-[40px] xl:leading-[50px] 2xl:text-[42px] 2xl:leading-[52px] relative pb-4'>
+                Perform Market Research to <br />
+                Gain Insights into Trends
+              </h1>
+              <p className='font-FiraSans text-TextColor-0 pb-6 max-w-[516px] w-full'>
+                Completely mesh leveraged total main for resource maximizing
+                applies applications. Credibly implement
+              </p>
+              <div className='grid gap-3 sm:gap-0 sm:items-center mb-11'>
+                <ul className='space-y-3'>
+                  <li className='font-FiraSans text-base sm:text-lg w-full text-white font-medium flex items-center gap-2'>
+                    <BsCheckLg
+                      size={'26'}
+                      className='text-PrimaryColor2-0'
+                    />
+                    35+ Professional Team Members
+                  </li>
+                  <li className='font-FiraSans text-base sm:text-lg w-full text-white font-medium flex items-center gap-2'>
+                    <BsCheckLg
+                      size={'26'}
+                      className='text-PrimaryColor2-0'
+                    />
+                    Any Business Problem Solving
+                  </li>
+                  <li className='font-FiraSans text-base sm:text-lg w-full text-white font-medium flex items-center gap-2'>
+                    <BsCheckLg
+                      size={'26'}
+                      className='text-PrimaryColor2-0'
+                    />
+                    Implement Business Pro
+                  </li>
+                </ul>
               </div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <img src={thumb} draggable="false" />
-              </div>
-            </div>
-          </div>
-          <div className="relative">
-            <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase mb-3">
-              FINANCE CONSULTING
-            </h5>
-            <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[34px] lg:leading-[44px] xl:text-[40px] xl:leading-[50px] 2xl:text-[42px] 2xl:leading-[52px] mb-4">
-              The Best Finance Consulting <br /> In Town Since 2007
-            </h1>
-            <p className="font-FiraSans text-TextColor2-0">
-              Globally engage cross-media leadership skills before cross-media
-              innovation develop standardized platforms without robust
-              applications. Conveniently go forward collaboration and
-              idea-sharing
-            </p>
-            <div className="grid items-center grid-cols-1 gap-7 sm:grid-cols-2 border-b border-BorderColor-0 mt-9 pb-7 mb-9">
-              <div className="flex items-center gap-5">
-                <div className="relative z-10 pl-4 pt-4 before:absolute before:top-0 before:left-0 before:size-[50px] before:rounded-md before:bg-BodyBg4-0 before:-z-10">
-                  <img src={aboutIcon} draggable="false" />
-                </div>
-                <div className="flex-1">
-                  <h5 className="font-FiraSans font-medium text-HeadingColor-0 text-lg md:text-xl lg:text-sm xl:text-lg 2xl:text-xl">
-                    Business Planning & Technologist
-                  </h5>
-                </div>
-              </div>
-              <div className="flex items-center gap-5">
-                <div className="relative z-10 pl-4 pt-4 before:absolute before:top-0 before:left-0 before:size-[50px] before:rounded-md before:bg-BodyBg4-0 before:-z-10">
-                  <img src={aboutIcon2} draggable="false" />
-                </div>
-                <div className="flex-1">
-                  <h5 className="font-FiraSans font-medium text-HeadingColor-0 text-lg md:text-xl lg:text-sm xl:text-lg 2xl:text-xl">
-                    Human Services and Consulting
-                  </h5>
-                </div>
+              <div>
+                <Link to={'/about'}>
+                  <button className='primary-btn4 !bg-transparent !border-white hover:!border-PrimaryColor2-0 before:!bg-PrimaryColor2-0 !py-[15px] after:bg-opacity-50 after:!top-9'>{`More About Us`}</button>
+                </Link>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-8">
-              <Link to={"/contact"}>
-                <button className="primary-btn2">
-                  <FaRegThumbsUp />
-                  {`Get Started now`}
-                </button>
-              </Link>
-              <Link to={"/contact"}>
-                <button className="flex items-center gap-2 text-HeadingColor-0 font-FiraSans font-medium group">
-                  Our Services
-                  <GoArrowUpRight
-                    size={"20"}
-                    className="text-PrimaryColor-0 transition-all duration-500 group-hover:rotate-45"
-                  />
-                </button>
-              </Link>
+            <div className='relative z-10 hidden md:block'>
+              <img
+                src={aboutThumb}
+                draggable='false'
+                className='-mb-[104px] xl:-mb-[250px] xl:ml-10 2xl:ml-20 relative top-4'
+              />
             </div>
           </div>
         </div>
       </div>
-      <img
-        src={aboutShape}
-        draggable="false"
-        className="absolute -z-10 top-36 right-0 animate-wiggle hidden 2xl:block"
-      />
+      <div>
+        <div className='Container'>
+          <div className='flex flex-wrap items-center gap-7 2xl:gap-[120px] py-[46px]'>
+            <div className='flex items-center gap-10 sm:gap-8 md:gap-10'>
+              <CountUp
+                start={-15}
+                end={5}
+                suffix='k+'
+                className='text-3xl sm:text-4xl md:text-[56px] font-FiraSans font-bold text-HeadingColor2-0'
+              />
+              <div className='relative z-10 before:absolute before:-left-5 sm:before:-left-0 md:before:-left-5 before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-[30px] before:bg-Secondarycolor2-0 before:bg-opacity-40'>
+                <h6 className='font-FiraSans text-left text-sm leading-4 sm:text-xl sm:leading-6 font-semibold text-HeadingColor2-0'>
+                  Completed Work
+                </h6>
+                <p className='font-FiraSans text-[15px] text-TextColor2-0 pt-2'>
+                  With Client Satisfaction
+                </p>
+              </div>
+            </div>
+            <div className='flex items-center gap-10 sm:gap-8 md:gap-10'>
+              <CountUp
+                start={-15}
+                end={3}
+                suffix='k+'
+                className='text-3xl sm:text-4xl md:text-[56px] font-FiraSans font-bold text-HeadingColor2-0'
+              />
+              <div className='relative z-10 before:absolute before:-left-5 sm:before:-left-0 md:before:-left-5 before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-[30px] before:bg-Secondarycolor2-0 before:bg-opacity-40'>
+                <h6 className='font-FiraSans text-left text-sm leading-4 sm:text-xl sm:leading-6 font-semibold text-HeadingColor2-0'>
+                  Our Customer
+                </h6>
+                <p className='font-FiraSans text-[15px] text-TextColor2-0 pt-2'>
+                  With Client Satisfaction
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
