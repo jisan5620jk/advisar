@@ -1,6 +1,7 @@
 import teamThumb from '/images/team1.jpg';
 import teamThumb2 from '/images/team2.jpg';
 import teamThumb3 from '/images/team3.jpg';
+import teamThumb4 from '/images/team4.png';
 import TeamCard from './TeamCard';
 import {
   FaFacebookF,
@@ -42,7 +43,7 @@ const teamData = [
   },
   {
     id: 4,
-    teamThumb: teamThumb2,
+    teamThumb: teamThumb4,
     teamTitle: 'James E. Huey',
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
@@ -54,7 +55,7 @@ const teamData = [
 
 const TeamMember = () => {
   return (
-    <section className='pb-28 relative'>
+    <section className='py-28 relative'>
       <div className='Container'>
         <div className='text-center'>
           <h5 className='font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase flex items-center justify-center gap-2 mb-3'>

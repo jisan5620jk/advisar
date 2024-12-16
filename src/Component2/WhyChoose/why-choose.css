@@ -1,12 +1,14 @@
-.why_choose_boxs > div:nth-last-of-type(2) .why_choose_box {
-  transform: translateX(-12px);
+@media screen and (min-width: 767px) {
+  .why_choose_boxs > div:nth-last-of-type(2) .why_choose_box {
+    transform: translateX(-12px);
+  }
 }
 
 .why_choose_boxs > div:nth-last-of-type(2) .why_choose_box::after {
   opacity: 60%;
 }
 
-.why_choose_box .round-circle {
+.why_choose_box .round-circle2{
   -webkit-animation-play-state: running;
   -moz-animation-play-state: running;
   -o-animation-play-state: running;
@@ -14,8 +16,8 @@
   opacity: 0;
 }
 
-.why_choose_box:hover .round-circle,
-.why_choose_boxs > div:nth-last-of-type(2) .why_choose_box .round-circle {
+.why_choose_box:hover .round-circle2,
+.why_choose_boxs > div:nth-last-of-type(2) .why_choose_box .round-circle2 {
   -webkit-animation-play-state: running;
   -moz-animation-play-state: running;
   -o-animation-play-state: running;
@@ -23,20 +25,20 @@
   opacity: 1;
 }
 
-.why_choose_box:hover .round-circle,
-.why_choose_boxs > div:nth-last-of-type(2) .why_choose_box .round-circle {
+.why_choose_box:hover .round-circle2,
+.why_choose_boxs > div:nth-last-of-type(2) .why_choose_box .round-circle2 {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0 0);
 }
 
-.why_choose_box:hover .round-circle:before,
+.why_choose_box:hover .round-circle2:before,
 .why_choose_boxs
   > div:nth-last-of-type(2)
   .why_choose_box
-  .round-circle:before {
+  .round-circle2:before {
   opacity: 1;
 }
 
-.why_choose_box .round-circle:before {
+.why_choose_box .round-circle2:before {
   position: absolute;
   content: '';
   background: #1c9a98;
@@ -50,7 +52,7 @@
   transition: 0.5s;
 }
 
-.round-circle {
+.round-circle2 {
   position: absolute;
   width: 96px;
   height: 96px;

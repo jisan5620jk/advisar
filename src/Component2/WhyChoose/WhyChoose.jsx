@@ -6,7 +6,7 @@ import whyChooseIcon3 from '/images/feature_3.png';
 
 const WhyChoose = () => {
   return (
-    <section className='pb-[120px] pt-20 sm:pt-0 lg:pt-[120px] bg-[url(/images/why-choose-bg.jpg)] bg-no-repeat bg-cover bg-center relative z-20 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-HeadingColor-0 before:bg-opacity-90 before:-z-10'>
+    <section className='pb-[120px] pt-20 lg:pt-[120px] bg-[url(/images/why-choose-bg.jpg)] bg-no-repeat bg-cover bg-center relative z-20 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-HeadingColor-0 before:bg-opacity-90 before:-z-10'>
       <div className='Container'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 lg:gap-10 2xl:gap-16 items-center'>
           <div className='relative z-10 rounded-[20px] overflow-hidden'>
