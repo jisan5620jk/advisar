@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Footer2 from '../Shared/Footer/Footer2';
-import Navbar6 from '../Shared/Navbar/Navbar6';
+import Navbar4 from '../Shared/Navbar/Navbar4';
 import BackToTop from '../Shared/BackToTop/BackToTop';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -29,7 +29,7 @@ const Main5 = () => {
   return (
     <>
       <HelmetChanger title={' Finance Consulting Classic'} />
-      <Navbar6 />
+      <Navbar4 />
       <BackToTop />
       <div>
         <Outlet />

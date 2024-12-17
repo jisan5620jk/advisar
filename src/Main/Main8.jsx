@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
-import Footer8 from '../Shared/Footer/Footer8';
-import Navbar8 from '../Shared/Navbar/Navbar8';
+import Footer2 from '../Shared/Footer/Footer2';
+import Navbar4 from '../Shared/Navbar/Navbar4';
 import BackToTop from '../Shared/BackToTop/BackToTop';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -29,12 +29,12 @@ const Main8 = () => {
   return (
     <>
       <HelmetChanger title={'Buseness Consulting Creative'} />
-      <Navbar8 />
+      <Navbar4 />
       <BackToTop />
       <div>
         <Outlet />
       </div>
-      <Footer8 />
+      <Footer2 />
     </>
   );
 };

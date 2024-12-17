@@ -1,7 +1,6 @@
-/* eslint-disable no-unused-vars */
 import pricingShape1 from "/images/pricing-shape-1.png";
 import pricingShape2 from "/images/pricing-shape-2.png";
-import { FaCheck, FaCircle, FaStarOfLife } from "react-icons/fa6";
+import { FaCircle, FaStarOfLife } from "react-icons/fa6";
 import PricingCard from "./PricingCard";
 
 const pricingData = [
@@ -18,7 +17,7 @@ const pricingData = [
     pricingContent2: "Reliability And Performance",
     pricingContent3: "Real Solar PV Systems",
     pricingContent4: "Just-In-Time Manufacturing",
-    pricingUrl: "/pricing_inner",
+    pricingUrl: "/pricing",
     pricingBtn: "Choose Plan",
     pricingShape1: pricingShape1,
     pricingShape2: pricingShape2,
@@ -36,7 +35,7 @@ const pricingData = [
     pricingContent2: "Reliability And Performance",
     pricingContent3: "Real Solar PV Systems",
     pricingContent4: "Just-In-Time Manufacturing",
-    pricingUrl: "/pricing_inner",
+    pricingUrl: "/pricing",
     pricingBtn: "Choose Plan",
     pricingShape1: pricingShape1,
     pricingShape2: pricingShape2,
@@ -54,7 +53,7 @@ const pricingData = [
     pricingContent2: "Reliability And Performance",
     pricingContent3: "Real Solar PV Systems",
     pricingContent4: "Just-In-Time Manufacturing",
-    pricingUrl: "/pricing_inner",
+    pricingUrl: "/pricing",
     pricingBtn: "Choose Plan",
     pricingShape1: pricingShape1,
     pricingShape2: pricingShape2,

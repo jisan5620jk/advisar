@@ -14,7 +14,7 @@ const featureData = [
     featureTitle: 'Business Planning and Technologist',
     featureDesc:
       'Completely implement globals without impactful markets in conveniently done innovate customer directed',
-    featureUrl: '/',
+    featureUrl: '/service_details',
     featureBtn: 'Read More',
     featureBtnIcon: <LuMoveRight />,
   },
@@ -24,7 +24,7 @@ const featureData = [
     featureTitle: 'Human home ones and Consulting',
     featureDesc:
       'Completely implement globals without impactful markets in conveniently done innovate customer directed',
-    featureUrl: '/',
+    featureUrl: '/service_details',
     featureBtn: 'Read More',
     featureBtnIcon: <LuMoveRight />,
   },
@@ -34,7 +34,7 @@ const featureData = [
     featureTitle: 'Opportunity Global Business Service',
     featureDesc:
       'Completely implement globals without impactful markets in conveniently done innovate customer directed',
-    featureUrl: '/',
+    featureUrl: '/service_details',
     featureBtn: 'Read More',
     featureBtnIcon: <LuMoveRight />,
   },
@@ -44,7 +44,7 @@ const featureData = [
     featureTitle: 'Insurance for Family Consulting',
     featureDesc:
       'Completely implement globals without impactful markets in conveniently done innovate customer directed',
-    featureUrl: '/',
+    featureUrl: '/service_details',
     featureBtn: 'Read More',
     featureBtnIcon: <LuMoveRight />,
   },

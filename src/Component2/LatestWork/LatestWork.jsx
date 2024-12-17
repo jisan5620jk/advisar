@@ -1,61 +1,61 @@
 /* eslint-disable no-unused-vars */
-import latestWorkThumb from "/images/work-1.jpg";
-import latestWorkThumb2 from "/images/work-2.jpg";
-import latestWorkThumb3 from "/images/work-3.jpg";
-import latestWorkThumb4 from "/images/work-4.jpg";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import LatestWorkCard from "./LatestWorkCard";
-import { HiMiniArrowUpRight } from "react-icons/hi2";
+import latestWorkThumb from '/images/work-1.jpg';
+import latestWorkThumb2 from '/images/work-2.jpg';
+import latestWorkThumb3 from '/images/work-3.jpg';
+import latestWorkThumb4 from '/images/work-4.jpg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import LatestWorkCard from './LatestWorkCard';
+import { HiMiniArrowUpRight } from 'react-icons/hi2';
 
 const LatestWorkData = [
   {
     id: 1,
     latestWorkThumb: latestWorkThumb,
-    latestWorkTitle: "Business Implement",
-    latestWorkDesc: "Technology",
-    latestWorkUrl: "/project_details",
+    latestWorkTitle: 'Business Implement',
+    latestWorkDesc: 'Technology',
+    latestWorkUrl: '/portfolio_details',
     latestWorkBtn: <HiMiniArrowUpRight />,
   },
   {
     id: 2,
     latestWorkThumb: latestWorkThumb2,
-    latestWorkTitle: "Business Implement",
-    latestWorkDesc: "Technology",
-    latestWorkUrl: "/project_details",
+    latestWorkTitle: 'Business Implement',
+    latestWorkDesc: 'Technology',
+    latestWorkUrl: '/portfolio_details',
     latestWorkBtn: <HiMiniArrowUpRight />,
   },
   {
     id: 3,
     latestWorkThumb: latestWorkThumb3,
-    latestWorkTitle: "Business Implement",
-    latestWorkDesc: "Technology",
-    latestWorkUrl: "/project_details",
+    latestWorkTitle: 'Business Implement',
+    latestWorkDesc: 'Technology',
+    latestWorkUrl: '/portfolio_details',
     latestWorkBtn: <HiMiniArrowUpRight />,
   },
   {
     id: 4,
     latestWorkThumb: latestWorkThumb4,
-    latestWorkTitle: "Business Implement",
-    latestWorkDesc: "Technology",
-    latestWorkUrl: "/project_details",
+    latestWorkTitle: 'Business Implement',
+    latestWorkDesc: 'Technology',
+    latestWorkUrl: '/portfolio_details',
     latestWorkBtn: <HiMiniArrowUpRight />,
   },
   {
     id: 5,
     latestWorkThumb: latestWorkThumb2,
-    latestWorkTitle: "Business Implement",
-    latestWorkDesc: "Technology",
-    latestWorkUrl: "/project_details",
+    latestWorkTitle: 'Business Implement',
+    latestWorkDesc: 'Technology',
+    latestWorkUrl: '/portfolio_details',
     latestWorkBtn: <HiMiniArrowUpRight />,
   },
   {
     id: 6,
     latestWorkThumb: latestWorkThumb,
-    latestWorkTitle: "Business Implement",
-    latestWorkDesc: "Technology",
-    latestWorkUrl: "/project_details",
+    latestWorkTitle: 'Business Implement',
+    latestWorkDesc: 'Technology',
+    latestWorkUrl: '/portfolio_details',
     latestWorkBtn: <HiMiniArrowUpRight />,
   },
 ];
@@ -83,20 +83,20 @@ const LatestWork = () => {
     },
   };
   return (
-    <section className="latest-work relative z-20 pt-28 pb-[120px] before:absolute before:left-0 before:top-0 before:w-full before:h-[60%] before:bg-center before:bg-cover before:bg-[url(/images/why-choose-bg.jpg)] before:-z-10 before:after after:left-0 after:top-0 after:w-full after:h-3/5 after:bg-HeadingColor-0 after:z-10 after:inline-block">
-      <div className="Container">
-        <div className="text-center">
-          <h5 className="font-FiraSans font-medium text-sm sm:text-base text-white uppercase flex items-center justify-center gap-2 mb-3">
-           // LATEST WORKS
+    <section className='latest-work relative z-20 pt-28 pb-[96px] before:absolute before:left-0 before:top-0 before:w-full before:h-[60%] before:bg-center before:bg-cover before:bg-[url(/images/why-choose-bg.jpg)] before:-z-10 after:absolute after:left-0 after:top-0 after:w-full after:h-3/5 after:bg-opacity-90 after:bg-HeadingColor-0 after:-z-10 after:inline-block'>
+      <div className='Container'>
+        <div className='text-center'>
+          <h5 className='font-FiraSans font-medium text-sm sm:text-base text-white uppercase flex items-center justify-center gap-2 mb-3'>
+            // LATEST WORKS
           </h5>
-          <h1 className="font-FiraSans font-semibold text-white text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]">
+          <h1 className='font-FiraSans font-semibold text-white text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]'>
             Recently We’ve Finishd those works
             <br />
             With highly Satisfaction
           </h1>
         </div>
       </div>
-      <div className="mt-[58px] xl:mx-5 2xl:mx-12">
+      <div className='mt-[58px] xl:mx-5 2xl:mx-12'>
         <Swiper {...settings}>
           <div>
             {LatestWorkData.map(

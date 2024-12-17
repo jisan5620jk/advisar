@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import BackToTop from '../Shared/BackToTop/BackToTop';
-import Navbar11 from '../Shared/Navbar/Navbar11';
-import Footer2 from '../Shared/Footer/Footer2';
+import Navbar10 from '../Shared/Navbar/Navbar10';
+import Footer9 from '../Shared/Footer/Footer9';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import HelmetChanger from '../Shared/Helmet/Helmet';
@@ -29,12 +29,12 @@ const Main11 = () => {
   return (
     <>
       <HelmetChanger title={'Inner Page'} />
-      <Navbar11 />
+      <Navbar10 />
       <BackToTop />
       <div>
         <Outlet />
       </div>
-      <Footer2 />
+      <Footer9 />
     </>
   );
 };

@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import Footer6 from '../Shared/Footer/Footer6';
+import Footer2 from '../Shared/Footer/Footer2';
 import Navbar4 from '../Shared/Navbar/Navbar4';
 import BackToTop from '../Shared/BackToTop/BackToTop';
 import AOS from 'aos';
@@ -34,7 +34,7 @@ const Main4 = () => {
       <div>
         <Outlet />
       </div>
-      <Footer6 />
+      <Footer2 />
     </>
   );
 };
