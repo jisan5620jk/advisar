@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import BackToTop from '../Shared/BackToTop/BackToTop';
-import Navbar11 from '../Shared/Navbar/Navbar11';
+import Navbar12 from '../Shared/Navbar/Navbar12';
 import Footer2 from '../Shared/Footer/Footer2';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -29,7 +29,7 @@ const Main12 = () => {
   return (
     <>
       <HelmetChanger title={'Inner Page'} />
-      <Navbar11 />
+      <Navbar12 />
       <BackToTop />
       <div>
         <Outlet />

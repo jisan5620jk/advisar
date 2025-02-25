@@ -257,7 +257,7 @@ const Navbar10 = () => {
         id='header-sticky'
         className='header-area header-sticky style-two style-eight style-ten'
       >
-        <div className='bg-transparent rounded-md px-5 py-4 lg:py-0 md:px-10 xl:px-[60px] flex items-center justify-between lg:grid lg:grid-cols-12'>
+        <div className='bg-transparent px-5 py-4 lg:py-0 md:px-10 xl:px-[60px] flex items-center justify-between lg:grid lg:grid-cols-12'>
           <div className='col-span-2'>
             <div className='header-logo'>
               <Link to={'/'}>
@@ -463,7 +463,7 @@ const Navbar10 = () => {
               </div>
               <div className='hidden lg:block relative'>
                 <Link
-                  to={'/'}
+                  to={'/home11'}
                   className='text-white flex items-center justify-center size-[46px] rounded-full border border-white border-opacity-15'
                 >
                   <MdLightMode size={'20'} />

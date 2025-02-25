@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
-import Logo from '/images/logo.png';
+import Logo from '/images/logo_2.png';
+import Logo2 from '/images/logo.png';
 import './navbar.css';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
+  FaArrowUp,
   FaChevronDown,
   FaEnvelope,
   FaFacebookF,
@@ -11,10 +13,13 @@ import {
   FaXTwitter,
 } from 'react-icons/fa6';
 import { FaPhoneAlt, FaTimes } from 'react-icons/fa';
-import { MdLightMode, MdLocationPin } from 'react-icons/md';
+import { MdLocationPin } from 'react-icons/md';
 import { IoMdPaperPlane } from 'react-icons/io';
+import { BiSearch } from 'react-icons/bi';
+import { LiaLongArrowAltRightSolid, LiaTimesSolid } from 'react-icons/lia';
+import { IoSearch } from 'react-icons/io5';
 
-const Navbar9 = () => {
+const Navbar12 = () => {
   //sticky
 
   useEffect(() => {
@@ -160,11 +165,38 @@ const Navbar9 = () => {
     }
   }, [headerIcon]);
 
+  //Menu Search
+  const handleMenuSearchClick = () => {
+    document.body.classList.add('search-active');
+  };
+
+  const handleCloseSearchClick = () => {
+    document.body.classList.remove('search-active');
+  };
+
+  const searchContentRef = useRef(null);
+  const bodyOverlay3Ref = useRef(null);
+  const searchInputRef = useRef(null); // Reference for the search input
+  const [isSubmitting, setIsSubmitting] = useState(false); // State to track form submission
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent default form submission
+    setIsSubmitting(true); // Set submitting state
+
+    // Simulate a submission with a timeout (replace with your actual submission logic)
+    setTimeout(() => {
+      setIsSubmitting(false); // Reset submitting state
+      // Optionally clear the input field or close the overlay
+      if (searchInputRef.current) {
+        searchInputRef.current.value = ''; // Clear the input
+      }
+      bodyOverlay3Ref.current.classList.remove('apply'); // Close overlay on submit (optional)
+      searchContentRef.current.classList.remove('opened'); // Close search content (optional)
+    }, 2000); // Simulate a delay of 2 seconds
+  };
+
   return (
-    <div
-      className='px-2 xl:px-5 mt-2 xl:mt-5'
-      data-lenis-prevent
-    >
+    <div data-lenis-prevent>
       <div className='offcanvas-area'>
         <div
           ref={offcanvasRef}
@@ -181,7 +213,7 @@ const Navbar9 = () => {
           <div className='offcanvas_logo'>
             <Link to={'/'}>
               <img
-                src={Logo}
+                src={Logo2}
                 draggable='false'
               />
             </Link>
@@ -258,7 +290,7 @@ const Navbar9 = () => {
       ></div>
       <div
         id='header-sticky'
-        className='header-area header-sticky style-two style-eight'
+        className='header-area header-sticky style-two style-eight style-eleven'
       >
         <div className='bg-transparent rounded-md px-5 py-4 lg:py-0 md:px-10 xl:px-[60px] flex items-center justify-between lg:grid lg:grid-cols-12'>
           <div className='col-span-2'>
@@ -271,7 +303,7 @@ const Navbar9 = () => {
               </Link>
             </div>
           </div>
-          <div className='lg:col-span-9 xl:col-span-8 2xl:col-span-7 hidden lg:block'>
+          <div className='lg:col-span-8 2xl:col-span-7 hidden lg:block'>
             <div className='header-main-menu text-center'>
               <nav className='main-menu-content'>
                 <ul>
@@ -452,27 +484,26 @@ const Navbar9 = () => {
               </nav>
             </div>
           </div>
-          <div className='lg:col-span-1 xl:col-span-2 2xl:col-span-3'>
-            <div className='header-right-box flex items-center gap-10 lg:gap-4 justify-end'>
-              <div className='hidden 2xl:block relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[25px] before:h-20 before:w-[1px] before:bg-HeadingColor-0 before:opacity-10'>
-                <input
-                  type='search'
-                  name='search'
-                  id='search'
-                  placeholder='Search...'
-                  required
-                  className='w-[220px] h-[46px] rounded-full px-6 py-2 font-FiraSans text-sm text-TextColor-0 bg-transparent border border-white border-opacity-15'
-                />
-              </div>
-              <div className='hidden lg:block relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[27px] before:h-20 before:w-[1px] before:bg-HeadingColor-0 before:opacity-10'>
-                <Link
-                  to={'/home11'}
-                  className='text-white flex items-center justify-center size-[46px] rounded-full border border-white border-opacity-15'
+          <div className='lg:col-span-2 2xl:col-span-3'>
+            <div className='header-right-box flex items-center gap-10 lg:gap-7 justify-end'>
+              <div className='hidden 2xl:block relative'>
+                <button
+                  className='cursor-pointer text-HeadingColor-0 relative top-1'
+                  onClick={handleMenuSearchClick}
                 >
-                  <MdLightMode size={'20'} />
+                  <BiSearch size={'20'} />
+                </button>
+              </div>
+              <div className='hidden lg:block relative'>
+                <Link
+                  to={'/'}
+                  className='lg:px-[18px] lg:py-3 xl:px-7 xl:py-3 2xl:px-[34px] 2xl:py-[17px] rounded-full font-FiraSans font-medium text-white overflow-hidden bg-PrimaryColor-0 flex items-center gap-2 relative z-10 before:absolute before:left-1/2 before:top-0 before:w-0 before:h-full before:-z-10 before:bg-HeadingColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0'
+                >
+                  Get A Quote
+                  <LiaLongArrowAltRightSolid size={'18'} />
                 </Link>
               </div>
-              <div className='header-sidebar hidden lg:block'>
+              <div className='header-sidebar hidden 2xl:block'>
                 <button
                   ref={menuSideBarRef}
                   className='menu-sidebar'
@@ -512,7 +543,7 @@ const Navbar9 = () => {
           <div className='sidebar_logo'>
             <Link to={'/'}>
               <img
-                src={Logo}
+                src={Logo2}
                 draggable='false'
               />
             </Link>
@@ -638,8 +669,47 @@ const Navbar9 = () => {
         ref={bodyOverlay2Ref}
         className='body-overlay2'
       ></div>
+      <div className='search-popup'>
+        <button
+          className='close-search'
+          onClick={handleCloseSearchClick}
+        >
+          <LiaTimesSolid />
+        </button>
+        <button
+          className='close-search2'
+          onClick={handleCloseSearchClick}
+        >
+          <FaArrowUp />
+        </button>
+        <form
+          method='post'
+          onSubmit={handleSubmit}
+        >
+          <div className='form-group'>
+            <input
+              type='search'
+              name='search-field'
+              placeholder='Search Here'
+              required
+              className='font-FiraSans placeholder:font-FiraSans'
+              ref={searchInputRef}
+            />
+            <button
+              type='submit'
+              disabled={isSubmitting} // Disable button if submitting
+            >
+              {isSubmitting ? (
+                <span>Loading...</span> // Show loading text
+              ) : (
+                <IoSearch />
+              )}
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
 
-export default Navbar9;
+export default Navbar12;

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import Logo from '/images/logo_2.png';
-import Logo2 from '/images/logo.png';
+import Logo from '/images/logo.png';
 import './navbar.css';
 import { useEffect, useRef } from 'react';
 import {
@@ -12,10 +11,8 @@ import {
   FaXTwitter,
 } from 'react-icons/fa6';
 import { FaPhoneAlt, FaTimes } from 'react-icons/fa';
-import { MdLocationPin } from 'react-icons/md';
+import { MdLightMode, MdLocationPin } from 'react-icons/md';
 import { IoMdPaperPlane } from 'react-icons/io';
-import { BiSearch } from 'react-icons/bi';
-import { LiaLongArrowAltRightSolid } from 'react-icons/lia';
 
 const Navbar11 = () => {
   //sticky
@@ -181,7 +178,7 @@ const Navbar11 = () => {
           <div className='offcanvas_logo'>
             <Link to={'/'}>
               <img
-                src={Logo2}
+                src={Logo}
                 draggable='false'
               />
             </Link>
@@ -258,9 +255,9 @@ const Navbar11 = () => {
       ></div>
       <div
         id='header-sticky'
-        className='header-area header-sticky style-two style-eight style-eleven'
+        className='header-area header-sticky style-two style-eight style-ten'
       >
-        <div className='bg-transparent rounded-md px-5 py-4 lg:py-0 md:px-10 xl:px-[60px] flex items-center justify-between lg:grid lg:grid-cols-12'>
+        <div className='bg-transparent px-5 py-4 lg:py-0 md:px-10 xl:px-[60px] flex items-center justify-between lg:grid lg:grid-cols-12'>
           <div className='col-span-2'>
             <div className='header-logo'>
               <Link to={'/'}>
@@ -271,7 +268,7 @@ const Navbar11 = () => {
               </Link>
             </div>
           </div>
-          <div className='lg:col-span-8 2xl:col-span-7 hidden lg:block'>
+          <div className='lg:col-span-9 xl:col-span-8 2xl:col-span-7 hidden lg:block'>
             <div className='header-main-menu text-center'>
               <nav className='main-menu-content'>
                 <ul>
@@ -452,25 +449,27 @@ const Navbar11 = () => {
               </nav>
             </div>
           </div>
-          <div className='lg:col-span-2 2xl:col-span-3'>
-            <div className='header-right-box flex items-center gap-10 lg:gap-7 justify-end'>
+          <div className='lg:col-span-1 xl:col-span-2 2xl:col-span-3'>
+            <div className='header-right-box flex items-center gap-10 lg:gap-4 justify-end'>
               <div className='hidden 2xl:block relative'>
-                <Link to={'/'}>
-                  <button className='text-HeadingColor-0 relative top-1'>
-                    <BiSearch size={'20'} />
-                  </button>
-                </Link>
+                <input
+                  type='search'
+                  name='search'
+                  id='search'
+                  placeholder='Search...'
+                  required
+                  className='w-[220px] h-[46px] rounded-full px-6 py-2 font-FiraSans text-sm text-TextColor-0 bg-transparent border border-white border-opacity-15'
+                />
               </div>
               <div className='hidden lg:block relative'>
                 <Link
-                  to={'/'}
-                  className='lg:px-[18px] lg:py-3 xl:px-7 xl:py-3 2xl:px-[34px] 2xl:py-[17px] rounded-full font-FiraSans font-medium text-white overflow-hidden bg-PrimaryColor-0 flex items-center gap-2 relative z-10 before:absolute before:left-1/2 before:top-0 before:w-0 before:h-full before:-z-10 before:bg-HeadingColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0'
+                  to={'/home10'}
+                  className='text-white flex items-center justify-center size-[46px] rounded-full border border-white border-opacity-15'
                 >
-                  Get A Quote
-                  <LiaLongArrowAltRightSolid size={'18'} />
+                  <MdLightMode size={'20'} />
                 </Link>
               </div>
-              <div className='header-sidebar hidden 2xl:block'>
+              <div className='header-sidebar hidden lg:block'>
                 <button
                   ref={menuSideBarRef}
                   className='menu-sidebar'
@@ -510,7 +509,7 @@ const Navbar11 = () => {
           <div className='sidebar_logo'>
             <Link to={'/'}>
               <img
-                src={Logo2}
+                src={Logo}
                 draggable='false'
               />
             </Link>
@@ -522,10 +521,7 @@ const Navbar11 = () => {
             </p>
           </div>
           <div>
-            <div className='sidebar_service-title'>
-              <h5>What Services We Provide?</h5>
-            </div>
-            <ul className='service_list'>
+            <ul>
               <li>
                 <Link to={'/'}>
                   <button>Managed IT Services</button>
@@ -570,7 +566,7 @@ const Navbar11 = () => {
           </div>
           <div className='sidebar_contact-info'>
             <div className='sidebar_contact-title'>
-              <h5>Have Questions? Contact Our Team!</h5>
+              <h5>Contact Us</h5>
             </div>
             <ul>
               <li>
@@ -607,29 +603,24 @@ const Navbar11 = () => {
                 </button>
               </div>
             </form>
+            <div className='status'></div>
           </div>
-          <ul className='sidebar-social-icon'>
-            <li>
+          <div className='sidebar_social'>
+            <div className='sidebar-social-icon'>
               <Link to={'/'}>
                 <FaFacebookF />
               </Link>
-            </li>
-            <li>
               <Link to={'/'}>
                 <FaXTwitter />
               </Link>
-            </li>
-            <li>
               <Link to={'/'}>
                 <FaPinterestP />
               </Link>
-            </li>
-            <li>
               <Link to={'/'}>
                 <FaLinkedinIn />
               </Link>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
       <div

@@ -38,7 +38,7 @@ const Pricing = () => {
   }, []);
 
   return (
-    <section className='relative z-10 overflow-hidden pt-28 lg:pt-[160px] pb-[120px] bg-white'>
+    <section className='relative z-10 overflow-hidden pt-20 lg:pt-[120px] pb-[120px] bg-white'>
       <div className='Container'>
         <div className='text-center'>
           <h5 className='font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase flex items-center justify-center gap-2 mb-3'>

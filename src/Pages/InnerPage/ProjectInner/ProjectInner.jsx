@@ -84,9 +84,9 @@ const ProjectInner = () => {
   return (
     <>
       <BreadCrumb
-        breadCrumbTitle={'Projects'}
+        breadCrumbTitle={'Our Portfolio'}
         breadCrumbIcon={<FaArrowRightLong />}
-        breadCrumbLink={'Projects'}
+        breadCrumbLink={'Portfolio'}
       />
       <section className='py-28 bg-[#f3f4f8]'>
         <div className='Container'>

@@ -1,22 +1,19 @@
 import { Link } from 'react-router-dom';
-import Logo from '/images/logo_2.png';
+import Logo from '/images/logo.png';
 import './navbar.css';
 import { useEffect, useRef } from 'react';
 import {
   FaChevronDown,
   FaEnvelope,
   FaFacebookF,
-  FaInstagram,
   FaLinkedinIn,
   FaPinterestP,
   FaXTwitter,
 } from 'react-icons/fa6';
 import { FaPhoneAlt, FaTimes } from 'react-icons/fa';
-import { MdLocationPin } from 'react-icons/md';
+import { MdLightMode, MdLocationPin } from 'react-icons/md';
 import { IoMdPaperPlane } from 'react-icons/io';
 import { LuMoveRight } from 'react-icons/lu';
-import { ImFacebook2 } from 'react-icons/im';
-import { BiSearch } from 'react-icons/bi';
 
 const Navbar6 = () => {
   //sticky
@@ -75,6 +72,7 @@ const Navbar6 = () => {
     };
   }, []);
 
+  //Menu Bar
   const menuBarRef = useRef(null);
   const offcanvasRef = useRef(null);
   const bodyOverlayRef = useRef(null);
@@ -165,10 +163,7 @@ const Navbar6 = () => {
   }, [headerIcon]);
 
   return (
-    <div
-      className='absolute z-50 w-full'
-      data-lenis-prevent
-    >
+    <div>
       <div className='offcanvas-area'>
         <div
           ref={offcanvasRef}
@@ -260,76 +255,12 @@ const Navbar6 = () => {
         ref={bodyOverlayRef}
         className='body-overlay'
       ></div>
-      <header className='bg-transparent relative z-10'>
-        <div className='Container flex items-center justify-between h-[52px]'>
-          <div className='flex items-center gap-8'>
-            <div className=' sm:flex items-center gap-2 hidden'>
-              <h6 className='font-FiraSans text-[15px] text-PrimaryColor-0'>
-                Mial :
-              </h6>
-              <Link
-                to={'/'}
-                className='font-FiraSans text-[15px] text-TextColor2-0 transition-all duration-500 hover:text-PrimaryColor-0'
-              >
-                example@gmail.com
-              </Link>
-            </div>
-            <div className=' md:flex items-center gap-2 hidden'>
-              <h6 className='font-FiraSans text-[15px] text-PrimaryColor-0'>
-                Call Us :
-              </h6>
-              <Link
-                to={'/'}
-                className='font-FiraSans text-[15px] text-TextColor2-0 transition-all duration-500 hover:text-PrimaryColor-0'
-              >
-                +980 123 (4587) 584
-              </Link>
-            </div>
-          </div>
-          <div className='flex items-center gap-16'>
-            <ul className='flex gap-5 items-center'>
-              <li>
-                <Link
-                  to={'/'}
-                  className='transition-all duration-500 text-HeadingColor-0 hover:text-PrimaryColor-0'
-                >
-                  <ImFacebook2 size={'14'} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={'/'}
-                  className='transition-all duration-500 text-HeadingColor-0 hover:text-PrimaryColor-0'
-                >
-                  <FaXTwitter />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={'/'}
-                  className='transition-all duration-500 text-HeadingColor-0 hover:text-PrimaryColor-0'
-                >
-                  <FaLinkedinIn />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={'/'}
-                  className='transition-all duration-500 text-HeadingColor-0 hover:text-PrimaryColor-0'
-                >
-                  <FaInstagram />
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </header>
       <div
         id='header-sticky'
-        className='header-area header-sticky style-two style-six'
+        className='header-area header-sticky header-classic'
       >
         <div className='Container'>
-          <div className='bg-white rounded-md px-8 flex items-center justify-between lg:grid lg:grid-cols-12'>
+          <div className='flex items-center justify-between lg:grid lg:grid-cols-12'>
             <div className='col-span-2'>
               <div className='header-logo'>
                 <Link to={'/'}>
@@ -340,7 +271,7 @@ const Navbar6 = () => {
                 </Link>
               </div>
             </div>
-            <div className='col-span-7 hidden lg:block'>
+            <div className='col-span-8 hidden lg:block'>
               <div className='header-main-menu text-center'>
                 <nav className='main-menu-content'>
                   <ul>
@@ -531,33 +462,21 @@ const Navbar6 = () => {
                 </nav>
               </div>
             </div>
-            <div className='col-span-3'>
-              <div className='header-right-box flex items-center gap-10 lg:gap-6 xl:gap-6 2xl:gap-12 justify-end'>
-                <div className='hidden lg:block relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[25px] before:h-20 before:w-[1px] before:bg-HeadingColor-0 before:opacity-10'>
-                  <Link to={'/'}>
-                    <button className='text-HeadingColor-0 relative top-1'>
-                      <BiSearch size={'20'} />
-                    </button>
-                  </Link>
-                </div>
-                <div className='hidden lg:block relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[27px] before:h-20 before:w-[1px] before:bg-HeadingColor-0 before:opacity-10'>
-                  <Link
-                    to={'/contact'}
-                    className='font-FiraSans font-medium capitalize text-HeadingColor-0 flex items-center gap-1'
-                  >
+            <div className='col-span-2'>
+              <div className='header-right-box flex items-center gap-10 lg:gap-4 2xl:gap-8 justify-end'>
+                <div className='header-btn hidden lg:block'>
+                  <Link to={'/contact'}>
                     get a quote<span></span>
-                    <LuMoveRight size={'19'} />
+                    <LuMoveRight />
                   </Link>
                 </div>
-                <div className='header-sidebar hidden lg:block'>
-                  <button
-                    ref={menuSideBarRef}
-                    className='menu-sidebar'
+                <div className='hidden xl:block relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[27px] before:h-20 before:w-[1px] before:bg-HeadingColor-0 before:opacity-10'>
+                  <Link
+                    to={'/home8'}
+                    className='text-white flex items-center justify-center size-9 rounded-full bg-white bg-opacity-15'
                   >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </button>
+                    <MdLightMode size={'20'} />
+                  </Link>
                 </div>
                 <div className='header-bar lg:hidden'>
                   <button

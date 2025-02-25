@@ -15,7 +15,7 @@ import { MdLightMode, MdLocationPin } from 'react-icons/md';
 import { IoMdPaperPlane } from 'react-icons/io';
 import { LuMoveRight } from 'react-icons/lu';
 
-const Navbar4 = () => {
+const Navbar5 = () => {
   //sticky
 
   useEffect(() => {
@@ -472,7 +472,7 @@ const Navbar4 = () => {
                 </div>
                 <div className='hidden xl:block relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[27px] before:h-20 before:w-[1px] before:bg-HeadingColor-0 before:opacity-10'>
                   <Link
-                    to={'/home5'}
+                    to={'/home4'}
                     className='text-white flex items-center justify-center size-9 rounded-full bg-white bg-opacity-15'
                   >
                     <MdLightMode size={'20'} />
@@ -631,4 +631,4 @@ const Navbar4 = () => {
   );
 };
 
-export default Navbar4;
+export default Navbar5;

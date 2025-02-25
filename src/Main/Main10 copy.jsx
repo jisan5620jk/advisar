@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import BackToTop from '../Shared/BackToTop/BackToTop';
-import Navbar9 from '../Shared/Navbar/Navbar9';
 import Footer9 from '../Shared/Footer/Footer9';
+import Navbar10 from '../Shared/Navbar/Navbar10';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import HelmetChanger from '../Shared/Helmet/Helmet';
@@ -11,7 +11,7 @@ import 'lenis/dist/lenis.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const Main9 = () => {
+const Main10 = () => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -28,8 +28,8 @@ const Main9 = () => {
   gsap.ticker.lagSmoothing(0);
   return (
     <>
-      <HelmetChanger title={'Buseness Consulting Classic'} />
-      <Navbar9 />
+      <HelmetChanger title={'Buseness Consulting Dark'} />
+      <Navbar10 />
       <BackToTop />
       <div>
         <Outlet />
@@ -38,4 +38,4 @@ const Main9 = () => {
     </>
   );
 };
-export default Main9;
+export default Main10;

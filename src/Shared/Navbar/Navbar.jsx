@@ -570,14 +570,12 @@ const Navbar = () => {
             <div className='col-span-3'>
               <div className='header-right-box flex items-center gap-5 justify-end'>
                 <div className='hidden lg:block relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[25px] before:h-20 before:w-[1px] before:bg-white before:opacity-20 2xl:mr-5'>
-                  <Link to={'/'}>
-                    <button
-                      className='text-HeadingColor-0 relative top-1 bg-transparent'
-                      onClick={handleMenuSearchClick}
-                    >
-                      <BiSearch size={'20'} />
-                    </button>
-                  </Link>
+                  <button
+                    className='cursor-pointer text-HeadingColor-0 relative top-1 bg-transparent'
+                    onClick={handleMenuSearchClick}
+                  >
+                    <BiSearch size={'20'} />
+                  </button>
                 </div>
                 <div className='hidden lg:block relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[27px] before:h-20 before:w-[1px] before:bg-white before:opacity-20'>
                   <Link
