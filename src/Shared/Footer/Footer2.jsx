@@ -107,7 +107,7 @@ const Footer2 = () => {
                   id='email'
                   placeholder='Enter Your E-Mail*'
                   required
-                  className='w-full h-[56px] outline-none font-FiraSans border-b border-BorderColor2-0 bg-transparent py-4 text-white placeholder:text-white mb-4'
+                  className='w-full h-[56px] outline-none font-FiraSans border-b border-BorderColor2-0 bg-transparent px-4 py-4 text-white placeholder:text-white mb-4'
                 />
               </label>
               <div className='absolute top-3 right-0'>
@@ -263,7 +263,7 @@ const Footer2 = () => {
                     size={'8'}
                     className='text-PrimaryColor-0'
                   />
-                  Nov 12, 2024
+                  Nov 12, 2025
                 </p>
               </div>
             </div>
@@ -288,7 +288,7 @@ const Footer2 = () => {
                     size={'8'}
                     className='text-PrimaryColor-0'
                   />
-                  Nov 24, 2024
+                  Nov 24, 2025
                 </p>
               </div>
             </div>
@@ -297,7 +297,7 @@ const Footer2 = () => {
         <div className='flex flex-col md:flex-row gap-y-7 md: md:col-span-6 justify-between md:items-center py-8 mt-[94px] border-t border-BorderColor2-0'>
           <div>
             <p className='font-FiraSans text-[15px] flex items-center text-white'>
-              Copyright &copy; 2024 advisar. Designed & Developed by Dream-IT
+              Copyright &copy; 2025 Advisar. Designed & Developed by Dream-IT
             </p>
           </div>
           <div>

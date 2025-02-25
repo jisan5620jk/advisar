@@ -26,7 +26,7 @@ const ServiceData = [
   {
     id: 2,
     serviceIcon: serviceIcon2,
-    serviceSubTitle: 'Finance',
+    serviceSubTitle: 'Service',
     serviceTitle: 'IT Solution Services',
     serviceDesc: 'Seamlessly expedite extensible methodologies benchmark ',
     serviceUrl: '/service_details',
@@ -37,7 +37,7 @@ const ServiceData = [
   {
     id: 3,
     serviceIcon: serviceIcon,
-    serviceSubTitle: 'Finance',
+    serviceSubTitle: 'Offer',
     serviceTitle: 'Marketing Services',
     serviceDesc: 'Seamlessly expedite extensible methodologies benchmark ',
     serviceUrl: '/service_details',

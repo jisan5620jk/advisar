@@ -14,7 +14,7 @@ const BlogData = [
     id: 1,
     blogGridThumb: blogGridThumb,
     blogGridDateIcon: <FaCircle />,
-    blogGridDate: '04 Mar, 2024',
+    blogGridDate: '04 Mar, 2025',
     blogGridPostBy: 'TECHNOLOGY',
     blogGridUrl: '/blog_details',
     blogGridTitle: 'Globally disintermediate exten services Planning',
@@ -25,7 +25,7 @@ const BlogData = [
     id: 2,
     blogGridThumb: blogGridThumb2,
     blogGridDateIcon: <FaCircle />,
-    blogGridDate: '14 Mar, 2024',
+    blogGridDate: '14 Mar, 2025',
     blogGridPostBy: 'Business',
     blogGridUrl: '/blog_details',
     blogGridTitle: 'Sustainability Consulting for Business Planning',
@@ -35,7 +35,7 @@ const BlogData = [
   {
     id: 3,
     blogGridThumb: blogGridThumb3,
-    blogGridDate: '24 Mar, 2024',
+    blogGridDate: '24 Mar, 2025',
     blogGridDateIcon: <FaCircle />,
     blogGridPostBy: 'Consulting',
     blogGridUrl: '/blog_details',
@@ -46,7 +46,7 @@ const BlogData = [
   {
     id: 4,
     blogGridThumb: blogGridThumb4,
-    blogGridDate: '17 May, 2024',
+    blogGridDate: '17 May, 2025',
     blogGridDateIcon: <FaCircle />,
     blogGridPostBy: 'Consulting',
     blogGridUrl: '/blog_details',
@@ -57,7 +57,7 @@ const BlogData = [
   {
     id: 5,
     blogGridThumb: blogGridThumb5,
-    blogGridDate: '24 Jun, 2024',
+    blogGridDate: '24 Jun, 2025',
     blogGridDateIcon: <FaCircle />,
     blogGridPostBy: 'Advising',
     blogGridUrl: '/blog_details',
@@ -68,7 +68,7 @@ const BlogData = [
   {
     id: 6,
     blogGridThumb: blogGridThumb6,
-    blogGridDate: '24 May, 2024',
+    blogGridDate: '24 May, 2025',
     blogGridDateIcon: <FaCircle />,
     blogGridPostBy: 'IT Solution',
     blogGridUrl: '/blog_details',

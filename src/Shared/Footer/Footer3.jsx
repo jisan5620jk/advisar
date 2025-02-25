@@ -105,7 +105,7 @@ const Footer3 = () => {
                 maximizing monotonectally reintermediate expanded
               </p>
               <form
-                action='#'
+                action='https://formspree.io/f/xayrekgy'
                 method='post'
                 className='relative sm:w-8/12'
               >
@@ -119,7 +119,7 @@ const Footer3 = () => {
                     id='email'
                     placeholder='Enter Your E-Mail*'
                     required
-                    className='w-full h-[56px] outline-none font-FiraSans border-b border-HeadingColor-0 border-opacity-30 bg-transparent py-4 text-HeadingColor-0 placeholder:text-HeadingColor-0 mb-4'
+                    className='w-full h-[56px] outline-none font-FiraSans border-b border-HeadingColor-0 border-opacity-30 bg-transparent px-4 py-4 text-HeadingColor-0 placeholder:text-HeadingColor-0 mb-4'
                   />
                 </label>
                 <div className='absolute top-3 right-0'>
@@ -279,7 +279,7 @@ const Footer3 = () => {
                     <span className='text-PrimaryColor-0'>
                       <FaCircle size={'8'} />
                     </span>
-                    Nov 16, 2024
+                    Nov 16, 2025
                   </p>
                 </div>
               </Link>
@@ -302,7 +302,7 @@ const Footer3 = () => {
                     <span className='text-PrimaryColor-0'>
                       <FaCircle size={'8'} />
                     </span>
-                    Nov 16, 2024
+                    Nov 16, 2025
                   </p>
                 </div>
               </Link>
@@ -311,7 +311,7 @@ const Footer3 = () => {
         </div>
         <div className='Container flex flex-col gap-5 md:flex-row md:gap-0 justify-between mt-[120px] py-6 border-t border-HeadingColor-0 border-opacity-20'>
           <p className='font-FiraSans text-HeadingColor-0 text-[15px]'>
-            Copyright © 2024{' '}
+            Copyright © 2025{' '}
             <Link
               to={'/'}
               className='text-PrimaryColor-0'

@@ -260,7 +260,7 @@ const BlogDetails = () => {
                       Jhon D. Alexon
                     </h6>
                     <p className='font-FiraSans text-[15px] text-TextColor2-0 mt-1'>
-                      24 October, 2024
+                      24 October, 2025
                     </p>
                     <p className='font-FiraSans text-TextColor2-0 2xl:pr-7 mt-6'>
                       Media leadership skills before cross-media innovation

@@ -163,6 +163,36 @@ const Navbar2 = () => {
     }
   }, [headerIcon]);
 
+  //Menu Search
+  const handleMenuSearchClick = () => {
+    document.body.classList.add('search-active');
+  };
+
+  const handleCloseSearchClick = () => {
+    document.body.classList.remove('search-active');
+  };
+
+  const searchContentRef = useRef(null);
+  const bodyOverlay3Ref = useRef(null);
+  const searchInputRef = useRef(null); // Reference for the search input
+  const [isSubmitting, setIsSubmitting] = useState(false); // State to track form submission
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent default form submission
+    setIsSubmitting(true); // Set submitting state
+
+    // Simulate a submission with a timeout (replace with your actual submission logic)
+    setTimeout(() => {
+      setIsSubmitting(false); // Reset submitting state
+      // Optionally clear the input field or close the overlay
+      if (searchInputRef.current) {
+        searchInputRef.current.value = ''; // Clear the input
+      }
+      bodyOverlay3Ref.current.classList.remove('apply'); // Close overlay on submit (optional)
+      searchContentRef.current.classList.remove('opened'); // Close search content (optional)
+    }, 2000); // Simulate a delay of 2 seconds
+  };
+
   return (
     <div data-lenis-prevent>
       <div className='offcanvas-area'>
@@ -628,6 +658,46 @@ const Navbar2 = () => {
         ref={bodyOverlay2Ref}
         className='body-overlay2'
       ></div>
+
+      <div className='search-popup'>
+        <button
+          className='close-search'
+          onClick={handleCloseSearchClick}
+        >
+          <LiaTimesSolid />
+        </button>
+        <button
+          className='close-search2'
+          onClick={handleCloseSearchClick}
+        >
+          <FaArrowUp />
+        </button>
+        <form
+          method='post'
+          onSubmit={handleSubmit}
+        >
+          <div className='form-group'>
+            <input
+              type='search'
+              name='search-field'
+              placeholder='Search Here'
+              required
+              className='font-FiraSans placeholder:font-FiraSans'
+              ref={searchInputRef}
+            />
+            <button
+              type='submit'
+              disabled={isSubmitting} // Disable button if submitting
+            >
+              {isSubmitting ? (
+                <span>Loading...</span> // Show loading text
+              ) : (
+                <IoSearch />
+              )}
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

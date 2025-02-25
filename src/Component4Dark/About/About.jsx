@@ -1,11 +1,11 @@
-import aboutThumb from "/images/about2-dark.png";
-import aboutShape from "/images/about_shape2.png";
-import aboutIcon from "/images/about_icon1.png";
-import aboutIcon2 from "/images/about_icon2.png";
-import thumb from "/images/like.png";
-import { Link } from "react-router-dom";
-import { FaRegThumbsUp } from "react-icons/fa";
-import { GoArrowUpRight } from "react-icons/go";
+import aboutThumb from '/images/about2-dark.png';
+import aboutShape from '/images/about_shape2.png';
+import aboutIcon from '/images/about_icon1.png';
+import aboutIcon2 from '/images/about_icon2.png';
+import thumb from '/images/like.png';
+import { Link } from 'react-router-dom';
+import { FaRegThumbsUp } from 'react-icons/fa';
+import { GoArrowUpRight } from 'react-icons/go';
 
 const About = () => {
   return (
@@ -37,7 +37,7 @@ const About = () => {
                       startOffset='0%'
                       className='fill-white'
                     >
-                      * Business Const. * Agency 2024 * Finance Consult
+                      * Business Const. * Agency 2025 * Finance Consult
                     </textPath>
                   </text>
                 </svg>
@@ -69,7 +69,7 @@ const About = () => {
                   <img
                     src={aboutIcon}
                     draggable='false'
-                    className="brightness-0 invert-[1]"
+                    className='brightness-0 invert-[1]'
                   />
                 </div>
                 <div className='flex-1'>
@@ -83,7 +83,7 @@ const About = () => {
                   <img
                     src={aboutIcon2}
                     draggable='false'
-                    className="brightness-0 invert-[1]"
+                    className='brightness-0 invert-[1]'
                   />
                 </div>
                 <div className='flex-1'>

@@ -1,10 +1,10 @@
-import { FaCircle } from "react-icons/fa6";
+import { FaCircle } from 'react-icons/fa6';
 import blogThumb from '/images/blog3_1.png';
 import blogThumb2 from '/images/blog3_2.png';
 import blogThumb3 from '/images/blog3_3.png';
 import border from '/images/hero_border.png';
-import BlogCard from "./BlogCard";
-import { CiHeart } from "react-icons/ci";
+import BlogCard from './BlogCard';
+import { CiHeart } from 'react-icons/ci';
 
 const blogData = [
   {
@@ -12,7 +12,7 @@ const blogData = [
     blogThumb: blogThumb,
     blogThumbTitle: 'Creative',
     blogDateIcon: <FaCircle />,
-    blogDate: '04 Mar, 2024',
+    blogDate: '04 Mar, 2025',
     blogCommentIcon: <CiHeart />,
     blogComment: '2 Comments',
     blogUrl: '/blog_details',
@@ -25,7 +25,7 @@ const blogData = [
     blogThumb: blogThumb2,
     blogThumbTitle: 'Creative',
     blogDateIcon: <FaCircle />,
-    blogDate: '14 Mar, 2024',
+    blogDate: '14 Mar, 2025',
     blogCommentIcon: <CiHeart />,
     blogComment: '2 Comments',
     blogUrl: '/blog_details',
@@ -38,7 +38,7 @@ const blogData = [
     blogThumb: blogThumb3,
     blogThumbTitle: 'Creative',
     blogDateIcon: <FaCircle />,
-    blogDate: '24 Mar, 2024',
+    blogDate: '24 Mar, 2025',
     blogCommentIcon: <CiHeart />,
     blogComment: '2 Comments',
     blogUrl: '/blog_details',

@@ -37,7 +37,7 @@ const About = () => {
                       startOffset='0%'
                       className='fill-HeadingColor-0'
                     >
-                      * Business Const. * Agency 2024 * Finance Consult
+                      * Business Const. * Agency 2025 * Finance Consult
                     </textPath>
                   </text>
                 </svg>

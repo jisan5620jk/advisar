@@ -1,5 +1,5 @@
 import bgImage from '/images/breadcumb2.png';
-import { FaCircle } from "react-icons/fa6";
+import { FaCircle } from 'react-icons/fa6';
 
 const BreadCrumb2 = () => {
   return (
@@ -10,7 +10,8 @@ const BreadCrumb2 = () => {
             src={bgImage}
             alt='Image'
             draggable='false'
-            className='max-w-[inherit] h-fit object-cover'/>
+            className='max-w-[inherit] h-fit object-cover'
+          />
         </span>
         <div className='Container relative z-20'>
           <h6 className='font-FiraSans font-medium text-sm text-white bg-PrimaryColor-0 inline-block text-center rounded-r-full py-[5px] px-4 uppercase'>
@@ -23,18 +24,30 @@ const BreadCrumb2 = () => {
             <ul className='flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center mx-auto text-center'>
               <li>
                 <h6 className='font-FiraSans text-center text-white flex items-center gap-2 uppercase'>
-                 <FaCircle size={'8'} className="text-PrimaryColor-0"/>20 November, 2024
+                  <FaCircle
+                    size={'8'}
+                    className='text-PrimaryColor-0'
+                  />
+                  20 November, 2025
                 </h6>
               </li>
               <li>
                 <h6 className='font-FiraSans text-center text-white flex items-center gap-2 uppercase'>
-                  <FaCircle size={'8'} className="text-PrimaryColor-0"/>By Admin
+                  <FaCircle
+                    size={'8'}
+                    className='text-PrimaryColor-0'
+                  />
+                  By Admin
                 </h6>
               </li>
               <li>
                 <a href={'#comment'}>
                   <button className='font-FiraSans text-center text-white flex items-center gap-2 uppercase'>
-                     <FaCircle size={'8'} className="text-PrimaryColor-0"/>Comments (1)
+                    <FaCircle
+                      size={'8'}
+                      className='text-PrimaryColor-0'
+                    />
+                    Comments (1)
                   </button>
                 </a>
               </li>

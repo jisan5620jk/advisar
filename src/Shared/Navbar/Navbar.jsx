@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom';
 import Logo from '/images/logo_2.png';
 import Logo2 from '/images/logo.png';
 import './navbar.css';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
+  FaArrowUp,
   FaChevronDown,
   FaEnvelope,
   FaFacebookF,
@@ -20,6 +21,8 @@ import { ImFacebook2 } from 'react-icons/im';
 import { BiSearch } from 'react-icons/bi';
 import { HiOutlineMail } from 'react-icons/hi';
 import { GiPhone } from 'react-icons/gi';
+import { LiaTimesSolid } from 'react-icons/lia';
+import { IoSearch } from 'react-icons/io5';
 
 const Navbar = () => {
   //sticky
@@ -166,6 +169,36 @@ const Navbar = () => {
       });
     }
   }, [headerIcon]);
+
+  //Menu Search
+  const handleMenuSearchClick = () => {
+    document.body.classList.add('search-active');
+  };
+
+  const handleCloseSearchClick = () => {
+    document.body.classList.remove('search-active');
+  };
+
+  const searchContentRef = useRef(null);
+  const bodyOverlay3Ref = useRef(null);
+  const searchInputRef = useRef(null); // Reference for the search input
+  const [isSubmitting, setIsSubmitting] = useState(false); // State to track form submission
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent default form submission
+    setIsSubmitting(true); // Set submitting state
+
+    // Simulate a submission with a timeout (replace with your actual submission logic)
+    setTimeout(() => {
+      setIsSubmitting(false); // Reset submitting state
+      // Optionally clear the input field or close the overlay
+      if (searchInputRef.current) {
+        searchInputRef.current.value = ''; // Clear the input
+      }
+      bodyOverlay3Ref.current.classList.remove('apply'); // Close overlay on submit (optional)
+      searchContentRef.current.classList.remove('opened'); // Close search content (optional)
+    }, 2000); // Simulate a delay of 2 seconds
+  };
 
   return (
     <div data-lenis-prevent>
@@ -538,7 +571,10 @@ const Navbar = () => {
               <div className='header-right-box flex items-center gap-5 justify-end'>
                 <div className='hidden lg:block relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[25px] before:h-20 before:w-[1px] before:bg-white before:opacity-20 2xl:mr-5'>
                   <Link to={'/'}>
-                    <button className='text-HeadingColor-0 relative top-1'>
+                    <button
+                      className='text-HeadingColor-0 relative top-1 bg-transparent'
+                      onClick={handleMenuSearchClick}
+                    >
                       <BiSearch size={'20'} />
                     </button>
                   </Link>
@@ -719,6 +755,45 @@ const Navbar = () => {
         ref={bodyOverlay2Ref}
         className='body-overlay2'
       ></div>
+      <div className='search-popup'>
+        <button
+          className='close-search'
+          onClick={handleCloseSearchClick}
+        >
+          <LiaTimesSolid />
+        </button>
+        <button
+          className='close-search2'
+          onClick={handleCloseSearchClick}
+        >
+          <FaArrowUp />
+        </button>
+        <form
+          method='post'
+          onSubmit={handleSubmit}
+        >
+          <div className='form-group'>
+            <input
+              type='search'
+              name='search-field'
+              placeholder='Search Here'
+              required
+              className='font-FiraSans placeholder:font-FiraSans'
+              ref={searchInputRef}
+            />
+            <button
+              type='submit'
+              disabled={isSubmitting} // Disable button if submitting
+            >
+              {isSubmitting ? (
+                <span>Loading...</span> // Show loading text
+              ) : (
+                <IoSearch />
+              )}
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

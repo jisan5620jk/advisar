@@ -101,7 +101,7 @@ const Contact = () => {
                 </h1>
               </div>
               <form
-                action='#'
+                action='https://formspree.io/f/xayrekgy'
                 method='post'
                 className='flex flex-col gap-y-5 pt-11 pb-[60px]'
               >
