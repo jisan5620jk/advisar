@@ -322,7 +322,7 @@ const Navbar2 = () => {
                         </li>
                         <li className='has-dropdown'>
                           <Link to={'/home3'}>
-                            Buseness Consulting 01
+                            Business Consulting 01
                             <span>
                               <FaChevronDown />
                             </span>
@@ -330,24 +330,24 @@ const Navbar2 = () => {
                           <ul className='submenu !top-[102px]'>
                             <li>
                               <Link to={'/home3'}>
-                                Buseness Consulting Creative
+                                Business Consulting Creative
                               </Link>
                             </li>
                             <li>
                               <Link to={'/home4'}>
-                                Buseness Consulting Classic
+                                Business Consulting Classic
                               </Link>
                             </li>
                             <li>
                               <Link to={'/home5'}>
-                                Buseness Consulting Dark
+                                Business Consulting Dark
                               </Link>
                             </li>
                           </ul>
                         </li>
                         <li className='has-dropdown'>
                           <Link to={'/home6'}>
-                            Buseness Consulting 02
+                            Business Consulting 02
                             <span>
                               <FaChevronDown />
                             </span>
@@ -355,17 +355,17 @@ const Navbar2 = () => {
                           <ul className='submenu !top-[154px]'>
                             <li>
                               <Link to={'/home6'}>
-                                Buseness Consulting Creative
+                                Business Consulting Creative
                               </Link>
                             </li>
                             <li>
                               <Link to={'/home7'}>
-                                Buseness Consulting Classic
+                                Business Consulting Classic
                               </Link>
                             </li>
                             <li>
                               <Link to={'/home8'}>
-                                Buseness Consulting Dark
+                                Business Consulting Dark
                               </Link>
                             </li>
                           </ul>

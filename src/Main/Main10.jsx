@@ -28,7 +28,7 @@ const Main10 = () => {
   gsap.ticker.lagSmoothing(0);
   return (
     <>
-      <HelmetChanger title={'Buseness Consulting Dark'} />
+      <HelmetChanger title={'Business Consulting Dark'} />
       <Navbar10 />
       <BackToTop />
       <div>

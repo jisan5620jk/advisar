@@ -12,23 +12,23 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Main = () => {
-    useEffect(() => {
-      AOS.init();
-      AOS.refresh();
-    }, []);
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
-    const lenis = new Lenis();
+  const lenis = new Lenis();
 
-    lenis.on('scroll', ScrollTrigger.update);
+  lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
 
-    gsap.ticker.lagSmoothing(0);
+  gsap.ticker.lagSmoothing(0);
   return (
     <>
-      <HelmetChanger title={'Buseness Consulting Creative'} />
+      <HelmetChanger title={'Business Consulting Creative'} />
       <Navbar />
       <BackToTop />
       <div>

@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import FsLightbox from "fslightbox-react";
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import FsLightbox from 'fslightbox-react';
 import bannerThumb from '/images/hero_thumb3.png';
 import border from '/images/hero_border.png';
 import box from '/images/box.png';
 import thumbDot from '/images/hero3_dot_shape.png';
 import { FaRegThumbsUp } from 'react-icons/fa';
-import { FaRegCircleCheck } from "react-icons/fa6";
-import { LuSquarePlay } from "react-icons/lu";
+import { FaRegCircleCheck } from 'react-icons/fa6';
+import { LuSquarePlay } from 'react-icons/lu';
 
 const Banner = () => {
   const [toggler, setToggler] = useState(false);
@@ -38,7 +38,7 @@ const Banner = () => {
               Continually plagiarize virtual web services with resource{' '}
               <br className='hidden xl:block 2xl:hidden' />
               maximizing <br className='hidden md:block lg:hidden 2xl:block' />{' '}
-              action items. Globally build Buseness
+              action items. Globally build Business
             </p>
             <div className='flex flex-col sm:flex-row sm:items-center gap-8'>
               <Link to={'/contact'}>
