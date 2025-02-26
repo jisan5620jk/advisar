@@ -1,15 +1,15 @@
 import { FaCircle } from 'react-icons/fa6';
-import blogThumb from '/images/blog_1.png';
-import blogThumb2 from '/images/blog_2.png';
-import blogThumb3 from '/images/blog_3.png';
+import { BsArrowRight } from 'react-icons/bs';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import BlogCard from './BlogCard';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { BsArrowRight } from 'react-icons/bs';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+
+import blogThumb from '/images/blog_1.png';
+import blogThumb2 from '/images/blog_2.png';
+import blogThumb3 from '/images/blog_3.png';
 
 const BlogData = [
   {
@@ -37,8 +37,19 @@ const BlogData = [
   {
     id: 3,
     blogThumb: blogThumb3,
-    blogDate: '24 Mar, 2025',
     blogDateIcon: <FaCircle />,
+    blogDate: '24 Mar, 2025',
+    blogPostBy: 'Consulting',
+    blogUrl: '/blog_details',
+    blogTitle: 'Consulting Industry changing Business Landscape',
+    blogBtn: 'Read More',
+    blogBtnIcon: <BsArrowRight />,
+  },
+  {
+    id: 4,
+    blogThumb: blogThumb2,
+    blogDateIcon: <FaCircle />,
+    blogDate: '24 Mar, 2025',
     blogPostBy: 'Consulting',
     blogUrl: '/blog_details',
     blogTitle: 'Consulting Industry changing Business Landscape',
@@ -50,10 +61,14 @@ const BlogData = [
 const Blog = () => {
   const settings = {
     loop: true,
+    modules: [Autoplay],
     spaceBetween: 30,
     speed: 1000,
     initialSlide: 1,
-    autoplay: true,
+    autoplay: {
+      delay: 3000, // Set delay time in milliseconds
+      disableOnInteraction: false, // Keep autoplay on user interaction
+    },
     breakpoints: {
       320: {
         slidesPerView: 1,
